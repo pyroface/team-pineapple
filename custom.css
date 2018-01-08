@@ -52,5 +52,32 @@ vw-100 {
 
   */
 
+  /* classes for background and color */
+
+  .green-color {
+      color: var(--green);
+  }
+  .green-background {
+      color: var(--green);
+  }
+  .yellow-color {
+      color: var(--yellow);
+  }
+  .yellow-background {
+      color: var(--yellow);
+  }
+  .grey-color {
+      color: var(--grey);
+  }
+  .grey-background {
+      color: var(--grey);
+  }
+  .black-color {
+      color: var(--black);
+  }
+  .black-background {
+      color: var(--black);
+  }
+
   /* --- Variables end -----------*/
 
