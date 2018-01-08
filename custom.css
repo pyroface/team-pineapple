@@ -58,25 +58,25 @@ vw-100 {
       color: var(--green);
   }
   .green-background {
-      color: var(--green);
+      background: var(--green);
   }
   .yellow-color {
       color: var(--yellow);
   }
   .yellow-background {
-      color: var(--yellow);
+      background: var(--yellow);
   }
   .grey-color {
       color: var(--grey);
   }
   .grey-background {
-      color: var(--grey);
+      background: var(--grey);
   }
   .black-color {
       color: var(--black);
   }
   .black-background {
-      color: var(--black);
+      background: var(--black);
   }
 
   /* --- Variables end -----------*/
