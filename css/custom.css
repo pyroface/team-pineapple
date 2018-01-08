@@ -28,3 +28,27 @@ vw-75 {
 vw-100 {
     width: 100vh;
 } 
+
+/* --- Sizing utilities end ------ */
+
+
+
+
+/* ----- Variables -----------*/
+
+:root {
+    --green: #27ae60;
+    --yellow: #f1c40f;
+    --grey: #ecf0f1;
+    --black:#292929;
+
+  }
+  /* 
+
+  Example on how to use css variables;
+  background: var(--green);
+
+  */
+
+  /* --- Variables end -----------*/
+
