@@ -187,16 +187,23 @@ Includes support for 25%, 50%, 75%, and 100% by default. (Only height)
   /* --- Variables end -----------*/
   /* --- Grid content start -----------*/
   .col1{
-    background: green;
+    background: #ecf0f1;
     padding: 0;
+    text-align: center;
+    border: 3px solid #292929;
   }
   .col2{
-    background: yellow;
+    background: #ecf0f1;
     padding: 0;
+    text-align: center;
+    border-top: 3px solid #292929;
+    border-bottom: 3px solid #292929;
   }
   .col3{
-    background: gray;
+    background: #ecf0f1;
     padding: 0;
+    text-align: center;
+    border: 3px solid #292929;
   }
   .container{
     max-width: 100%;
