@@ -4,7 +4,7 @@ body {
     height: 100vh;
     font-family: 'Nunito', sans-serif;
 }
-/*  Sizing utilities additional - Vertical Alignment
+/*  Sizing utilities additional - Vertical spacing
 Easily make an element as tall (relative to browser viewport) with our height utilities. 
 Includes support for 25%, 50%, 75%, and 100% by default. (Only height)
 */
@@ -136,13 +136,6 @@ Includes support for 25%, 50%, 75%, and 100% by default. (Only height)
 } 
 
 /* Padding ends */
-
-
-
-
-
-
-
 
 /* --- Sizing utilities end ------ */
 
