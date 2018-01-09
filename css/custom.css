@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:300,400,700');
 body {
-    width: 100vw;
     height: 100vh;
     font-family: 'Nunito', sans-serif;
 }
@@ -198,16 +197,17 @@ Includes support for 25%, 50%, 75%, and 100% by default. (Only height)
   }
   .container{
     max-width: 100%;
+    padding: 0;
   }
   .row{
     height: 100vh;
   }
   /* --- Grid content end -----------*/
   /* --- Footer Start -----------*/
-.container{
-  background-color: blue;
+.container1{
+  background: blue;
 }
-.container h3{
+.container1 h3{
   color: white;
   margin: 0;
 }
