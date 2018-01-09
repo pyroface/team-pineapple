@@ -42,7 +42,20 @@
 
     <section class="index__login">
       <div class="col-3 vh-75 back">
-          <h2 class="text-center">Create account</h2>
+          <form  class="form-signin">
+              <h2 class="form-signin-heading">Please sign in</h2>
+              <label for="inputEmail" class="sr-only">Email address</label><br>
+              <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+              <label for="inputPassword" class="sr-only">Password</label><br>
+              <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" value="remember-me"> Remember me
+                </label>
+              </div>
+             <!-- <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+            </form>
+       <!-- <h2 class="text-center">Create account</h2>
           <form>
               <div class="form-group text-white lead font-weight-bold">
                 <label for="formGroupExampleInput">Name</label>
@@ -59,9 +72,9 @@
                   </div>
                   <div class="col font-weight-bold font-lead">
                       <label for="formGroupExampleInput">Repeat password</label>
-                    <input type="text" class="form-control" placeholder="password">
+                    <input type="text" class="form-control" placeholder="repeat-password">
                   </div>
-                </div>
+                </div>-->
                 <button type="submit" class="btn btn-secondary w-100 mt-3">Sign in</button>
             </form>
       </div>
@@ -92,6 +105,9 @@
     crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
     crossorigin="anonymous"></script>
+    <script>
+    const hideBox = document.querySelector("#formHide").style.display = "none";
+    </script>
 </body>
 
 </html>
