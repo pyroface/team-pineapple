@@ -42,7 +42,18 @@
 
     <section class="index__login">
       <div class="col-3 vh-75 back">
-          <form  class="form-signin">
+          <nav aria-label="...">
+              <ul class="pagination justify-content-end">
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item active">
+                  <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+              </ul>
+            </nav>
+
+
+          <form id="formSignIn" class="form-signin">
               <h2 class="form-signin-heading">Please sign in</h2>
               <label for="inputEmail" class="sr-only">Email address</label><br>
               <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
@@ -53,10 +64,13 @@
                   <input type="checkbox" value="remember-me"> Remember me
                 </label>
               </div>
-             <!-- <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+              <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
             </form>
-       <!-- <h2 class="text-center">Create account</h2>
-          <form>
+
+
+
+            <form id="formSignUp">
+                <h2 class="text-center">Create account</h2>
               <div class="form-group text-white lead font-weight-bold">
                 <label for="formGroupExampleInput">Name</label>
                 <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter name">
@@ -106,7 +120,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
     crossorigin="anonymous"></script>
     <script>
-    const hideBox = document.querySelector("#formHide").style.display = "none";
+    const formHide = document.querySelector("#formSignIn").style.display = "none";
     </script>
 </body>
 

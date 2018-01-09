@@ -193,3 +193,20 @@ Includes support for 25%, 50%, 75%, and 100% by default. (Only height)
     background-size: cover;
 
 }
+
+.page-link {
+    background-color: transparent;
+    border: none;
+    color: var(--black);
+}
+
+.page-item.active .page-link {
+    background-color: var(--yellow);
+    border-color: var(--yellow);
+}
+.page-link:hover {
+    color: var(--black);
+    text-decoration: none;
+    background-color: transparent;
+    border-color: transparent;
+}
