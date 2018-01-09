@@ -186,29 +186,24 @@ Includes support for 25%, 50%, 75%, and 100% by default. (Only height)
 
   /* --- Variables end -----------*/
   /* --- Grid content start -----------*/
-  .colcolor1{
+  .col1{
     background: green;
+    padding: 0;
   }
-  .colcolor2{
+  .col2{
     background: yellow;
+    padding: 0;
   }
-  .colcolor3{
+  .col3{
     background: gray;
+    padding: 0;
   }
   .container{
     max-width: 100%;
-    padding: 0;
   }
   .row{
     height: 100vh;
   }
   /* --- Grid content end -----------*/
   /* --- Footer Start -----------*/
-.container1{
-  background: blue;
-}
-.container1 h3{
-  color: white;
-  margin: 0;
-}
   /* --- Footer End-----------*/
