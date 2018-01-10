@@ -19,25 +19,29 @@
   <title>Hello, world!</title>
 </head>
 
-<body class="index">
-  <header class="index__header">
-    <h1 class="index__big-heading">Navigation</h1>
-    <nav class="index__navigation">
-      <ul>
-        <li>
-          <a href>nav</a>
-        </li>
-        <li>
-          <a href>nav</a>
-        </li>
 
-        <li>
-          <a href>nav</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-
+<body>
+  <!-- Bootstrap navbar Start-->
+  <nav class="navbar navbar-expand-lg navbar-light"style="background-color: var(--grey);">
+  <a class="navbar-brand" href="#"> <img src="logo.ico" alt"gamelogo"=></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="#">Information</a>
+      <a class="nav-item nav-link" href="#">Leaderboard</a>
+      <a class="nav-item nav-link" href="#">Contact</a>
+    </div>
+  </div>
+  </nav>
+<!-- Bootstrap navbar End-->
+<!-- Grid content Start-->
+  <div class = "container">
+    <div class = "row">
+      <div class ="col-lg-2 col1">
+        
   <main class="index__main">
 
     <section class="index__login">
@@ -95,23 +99,38 @@
       </div>
       </div>
     </section>
-
-    <section class="index__info">
-      <h2>Information</h2>
-      <p>----- ---- ---- </p>
-      <p>----- ---- ---- </p>
-      <p>----- ---- ---- </p>
-    </section>
-
-    <section class="index__leaderboard">
-      <h2>Leaderboard</h2>
-    </section>
-
-  </main>
-
-  <footer class="index__footer">
-    Footer
-  </footer>
+      </div>
+      <div class ="col-lg-8 col2">
+        <h1>Information</h1>
+        <p>
+         Ska fungera som skattjakt. För varje 10:e meter så har man en chans på loot/skatter(röda stjärnorna).
+         Skatterna kan innehålla rikedomar i form av coins. Coins fungerar som poäng.
+         Coinsen är osäkrade och det finns en chans att förlora dom om man inte lyckas ta dom till en safe zone(svarta ringarna)
+         för att säkra dom för sitt lag. Spelet går på tid vilket betyder att man måste hinna ta sig mellan safe zones innan lagets
+         poäng försvinner. Om man hinner ta sig in i en safezone så återställs tiden och man kan fortsätta leta.
+        </p>
+      </div>
+      <div class ="col-lg-2 col3">
+        <p>Leaderboard</p>
+        <ul class "leaderboard-stats">
+          <li>dawdawdawdad</li>
+          <li>dawdawdawdad</li>
+          <li>dawdawdawdad</li>
+          <li>dawdawdawdad</li>
+          <li>dawdawdawdad</li>
+          <li>dawdawdawdad</li>
+          <li>dawdawdawdad</li>
+          <li>dawdawdawdad</li>
+          <li>dawdawdawdad</li>
+          <li>dawdawdawdad</li>
+          <li>dawdawdawdad</li>
+          <li>dawdawdawdad</li>
+        </ul>
+      </div>
+  </div>
+<!-- Grid content End-->
+<!-- Footer Start-->
+<!-- Footer End-->
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
