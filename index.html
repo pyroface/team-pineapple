@@ -55,12 +55,12 @@
                 <li class="page-item">
                   <a class="page-link no-active" href="#"></a>
                 </li>
-                <li class="page-item active">
+                <li id="pagination-1" class="page-item">
                   <a class="page-link no-active" href="#">1
                     <span class="sr-only">(current)</span>
                   </a>
                 </li>
-                <li class="page-item">
+                <li id="pagination-2" class="page-item">
                   <a class="page-link no-active" href="#">2</a>
                 </li>
               </ul>
@@ -153,7 +153,17 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
     crossorigin="anonymous"></script>
   <script>
-    const formHide = document.querySelector("#formSignIn").style.display = "none";
+    const signIn = document.querySelector("#formSignIn").style.display = "none";
+    const signUp = document.querySelector("#formSignUp").style.display = "block";
+
+    const pagi1 = document.querySelector("#pagination-1");
+    const pagi2 = document.querySelector("#pagination-2");
+
+    if(signUp === "block") {
+      pagi1.classList.add("active")
+    }else if(signIn === "block"){
+      pagi2.classList.add("active");
+    }
   </script>
 </body>
 
