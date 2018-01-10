@@ -223,28 +223,19 @@ body > main > section.index__login > div > nav > ul > li:nth-child(1) > a {
 .no-active {
     pointer-events: none;
 }
-  /* --- Grid content start -----------*/
-  .col1{
-    background: var(--grey);
-    padding: 0;
-    text-align: center;
-  }
-  .col2{
+
+
+  .info{
     background: var(--green);
     padding: 0;
     text-align: center;
     border: 4px solid var(--yellow);
   }
-  .col3{
+
+  .leaderboard{
     background: var(--grey);
     padding: 0;
     text-align: center;
-  }
-  .container{
-    max-width: 100%;
-  }
-  .row{
-    height: 100vh;
   }
   /* --- Grid content end -----------*/
   /* --- Footer Start -----------*/

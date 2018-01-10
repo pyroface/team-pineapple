@@ -19,50 +19,61 @@
   <title>Hello, world!</title>
 </head>
 
+<body class="index">
+  <header class="index__header">
+    <nav class="index__navigation navbar navbar-expand-lg navbar-light" style="background-color: var(--grey);">
+      <a class="navbar-brand" href="#">
+        <img src="logo.ico" alt "gamelogo"=>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="#">Home
+            <span class="sr-only">(current)</span>
+          </a>
+          <a class="nav-item nav-link" href="#">Information</a>
+          <a class="nav-item nav-link" href="#">Leaderboard</a>
+          <a class="nav-item nav-link" href="#">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-<body>
-  <!-- Bootstrap navbar Start-->
-  <nav class="navbar navbar-expand-lg navbar-light"style="background-color: var(--grey);">
-  <a class="navbar-brand" href="#"> <img src="logo.ico" alt"gamelogo"=></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="#">Information</a>
-      <a class="nav-item nav-link" href="#">Leaderboard</a>
-      <a class="nav-item nav-link" href="#">Contact</a>
-    </div>
-  </div>
-  </nav>
-<!-- Bootstrap navbar End-->
-<!-- Grid content Start-->
-  <div class = "container">
-    <div class = "row">
-      <div class ="col-lg-2 col1">
-        
+
+
   <main class="index__main">
+    <div class="container mw-100">
 
-    <section class="index__login">
-      <div class="col-12 vh-75 back p-0">
-        <div class="transparent p-2">
-          <nav aria-label="...">
+      <div class="row">
+        <div class="col-3 vh-100 back p-0">
+          <div class="transparent p-2">
+            <nav aria-label="...">
               <ul class="pagination justify-content-end">
-                <li class="page-item"><a class="page-link" href="#"></a></li>
-                <li class="page-item active">
-                  <a class="page-link" href="#">1 <span class="sr-only">(current)</span></a>
+                <li class="page-item">
+                  <a class="page-link" href="#"></a>
                 </li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item active">
+                  <a class="page-link" href="#">1
+                    <span class="sr-only">(current)</span>
+                  </a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="#">2</a>
+                </li>
               </ul>
             </nav>
 
 
-          <form id="formSignIn" class="form-signin">
+            <form id="formSignIn" class="form-signin">
               <h2 class="form-signin-heading">Please sign in</h2>
-              <label for="inputEmail" class="sr-only">Email address</label><br>
+              <label for="inputEmail" class="sr-only">Email address</label>
+              <br>
               <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-              <label for="inputPassword" class="sr-only">Password</label><br>
+              <label for="inputPassword" class="sr-only">Password</label>
+              <br>
               <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
               <div class="checkbox">
                 <label>
@@ -75,7 +86,7 @@
 
 
             <form id="formSignUp">
-                <h2 class="text-center">Create account</h2>
+              <h2 class="text-center">Create account</h2>
               <div class="form-group lead font-weight-bold color-black">
                 <label for="formGroupExampleInput">Name</label>
                 <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter name">
@@ -85,52 +96,53 @@
                 <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Account name">
               </div>
               <div class="form-row mt-4">
-                  <div class="col font-weight-bold color-black">
-                      <label for="formGroupExampleInput">Password</label>
-                    <input type="text" class="form-control" placeholder="password">
-                  </div>
-                  <div class="col font-weight-bold font-lead">
-                      <label for="formGroupExampleInput">Repeat pw</label>
-                    <input type="text" class="form-control" placeholder="repeat-password">
-                  </div>
+                <div class="col font-weight-bold color-black">
+                  <label for="formGroupExampleInput">Password</label>
+                  <input type="text" class="form-control" placeholder="password">
                 </div>
-                <button type="submit" class="btn btn-secondary w-100 mt-3">Sign in</button>
+                <div class="col font-weight-bold font-lead">
+                  <label for="formGroupExampleInput">Repeat pw</label>
+                  <input type="text" class="form-control" placeholder="repeat-password">
+                </div>
+              </div>
+              <button type="submit" class="btn btn-secondary w-100 mt-3">Sign in</button>
             </form>
+          </div>
+        </div>
+
+        <div class="index__info col-6 info">
+          <h1>Information</h1>
+          <p>
+            Ska fungera som skattjakt. För varje 10:e meter så har man en chans på loot/skatter(röda stjärnorna). Skatterna kan innehålla
+            rikedomar i form av coins. Coins fungerar som poäng. Coinsen är osäkrade och det finns en chans att förlora dom
+            om man inte lyckas ta dom till en safe zone(svarta ringarna) för att säkra dom för sitt lag. Spelet går på tid
+            vilket betyder att man måste hinna ta sig mellan safe zones innan lagets poäng försvinner. Om man hinner ta sig
+            in i en safezone så återställs tiden och man kan fortsätta leta.
+          </p>
+        </div>
+        <div class="index__leaderboard col-3">
+          <p>Leaderboard</p>
+          <ul class "leaderboard-stats">
+            <li>dawdawdawdad</li>
+            <li>dawdawdawdad</li>
+            <li>dawdawdawdad</li>
+            <li>dawdawdawdad</li>
+            <li>dawdawdawdad</li>
+            <li>dawdawdawdad</li>
+            <li>dawdawdawdad</li>
+            <li>dawdawdawdad</li>
+            <li>dawdawdawdad</li>
+            <li>dawdawdawdad</li>
+            <li>dawdawdawdad</li>
+            <li>dawdawdawdad</li>
+          </ul>
+        </div>
       </div>
-      </div>
-    </section>
-      </div>
-      <div class ="col-lg-8 col2">
-        <h1>Information</h1>
-        <p>
-         Ska fungera som skattjakt. För varje 10:e meter så har man en chans på loot/skatter(röda stjärnorna).
-         Skatterna kan innehålla rikedomar i form av coins. Coins fungerar som poäng.
-         Coinsen är osäkrade och det finns en chans att förlora dom om man inte lyckas ta dom till en safe zone(svarta ringarna)
-         för att säkra dom för sitt lag. Spelet går på tid vilket betyder att man måste hinna ta sig mellan safe zones innan lagets
-         poäng försvinner. Om man hinner ta sig in i en safezone så återställs tiden och man kan fortsätta leta.
-        </p>
-      </div>
-      <div class ="col-lg-2 col3">
-        <p>Leaderboard</p>
-        <ul class "leaderboard-stats">
-          <li>dawdawdawdad</li>
-          <li>dawdawdawdad</li>
-          <li>dawdawdawdad</li>
-          <li>dawdawdawdad</li>
-          <li>dawdawdawdad</li>
-          <li>dawdawdawdad</li>
-          <li>dawdawdawdad</li>
-          <li>dawdawdawdad</li>
-          <li>dawdawdawdad</li>
-          <li>dawdawdawdad</li>
-          <li>dawdawdawdad</li>
-          <li>dawdawdawdad</li>
-        </ul>
-      </div>
-  </div>
-<!-- Grid content End-->
-<!-- Footer Start-->
-<!-- Footer End-->
+    </div>
+    </div>
+  </main>
+
+
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -140,9 +152,9 @@
     crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
     crossorigin="anonymous"></script>
-    <script>
+  <script>
     const formHide = document.querySelector("#formSignIn").style.display = "none";
-    </script>
+  </script>
 </body>
 
 </html>
