@@ -85,25 +85,33 @@
 
 
 
-            <form id="formSignUp">
+            <form id="formSignUp" onsubmit="return false;" action="" novalidate>
               <h2 class="text-center">Create account</h2>
               <div class="form-group lead font-weight-bold color-black">
                 <label for="formGroupExampleInput">Name</label>
-                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter name">
+                <input type="text" class="form-control" id="validationCustom01" placeholder="Enter name" required>
+                <div class="invalid-feedback text-warning">
+                    Please choose a name.
+                  </div>
               </div>
               <div class="form-group lead font-weight-bold color-black">
                 <label for="formGroupExampleInput2">Username</label>
-                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Account name">
+                <input type="text" class="form-control" id="validationCustom02" placeholder="Account name" required>
+                <div class="invalid-feedback text-white">
+                    Please choose a username.
+                  </div>
               </div>
-              <div class="form-row mt-4">
-                <div class="col font-weight-bold color-black">
+              <div class="form-row mt-4 p-2">
+                <div class="font-weight-bold color-black">
                   <label for="formGroupExampleInput">Password</label>
-                  <input type="text" class="form-control" placeholder="password">
+                  <input type="password" id="validationCustom03" class="col-11 form-control" placeholder="password" required>
+                  <div class="invalid-feedback text-danger">
+                      Please choose a password.
+                    </div>
                 </div>
-                <div class="col font-weight-bold font-lead">
-                  <label for="formGroupExampleInput">Repeat pw</label>
-                  <input type="text" class="form-control" placeholder="repeat-password">
-                </div>
+                <small id="passwordHelpInline" class="row text-dark font-weight-bold mt-5">
+                    8-15 characters long.
+                  </small>
               </div>
               <button type="submit" class="btn btn-secondary w-100 mt-3">Sign in</button>
             </form>
@@ -156,6 +164,7 @@
     crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
     crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script>
     const signIn = document.querySelector("#formSignIn").style.display = "none";
     const signUp = document.querySelector("#formSignUp").style.display = "block";
@@ -169,6 +178,36 @@
       pagi2.classList.add("active");
     }
   </script>
+  <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+        'use strict';
+      
+        window.addEventListener('load', function() {
+          var form = document.getElementById('formSignUp');
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+            swal("Account created!", "", "success");
+
+            const signIn = document.querySelector("#formSignIn").style.display = "block";
+            const signUp = document.querySelector("#formSignUp").style.display = "none";
+        
+            const pagi1 = document.querySelector("#pagination-1");
+            const pagi2 = document.querySelector("#pagination-2");
+        
+            if(signIn === "block") {
+              pagi2.classList.add("active")
+              pagi1.classList.remove("active");
+            }
+
+          }, false);
+        }, false);
+      })();
+      </script>
 </body>
 
 </html>
