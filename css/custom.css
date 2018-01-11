@@ -234,6 +234,26 @@ Includes support for 25%, 50%, 75%, and 100% by default. (Only height)
     padding: 0;
     text-align: center;
   }
+
+  
+ul {
+    list-style-type: none;
+}
+
+.index__leaderboard {
+    background-color: var(--yellow);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    /* border: 1px solid var(--green); */
+    text-align: left;
+    padding: 8px;
+}
   #map{
      margin:100px;
      width:400px;
