@@ -216,9 +216,6 @@ Includes support for 25%, 50%, 75%, and 100% by default. (Only height)
     background-color: transparent;
     border-color: transparent;
 }
-body > main > section.index__login > div > nav > ul > li:nth-child(1) > a {
-    pointer-events: none;
-}
 
 .no-active {
     pointer-events: none;
@@ -257,3 +254,8 @@ td, th {
     text-align: left;
     padding: 8px;
 }
+  #map{
+     margin:100px;
+     width:400px;
+     height:400px;
+  }

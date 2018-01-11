@@ -54,15 +54,15 @@
             <nav aria-label="...">
               <ul class="pagination justify-content-end">
                 <li class="page-item">
-                  <a class="page-link" href="#"></a>
+                  <a class="page-link no-active" href="#"></a>
                 </li>
-                <li class="page-item active">
-                  <a class="page-link" href="#">1
+                <li id="pagination-1" class="page-item">
+                  <a class="page-link no-active" href="#">1
                     <span class="sr-only">(current)</span>
                   </a>
                 </li>
-                <li class="page-item">
-                  <a class="page-link" href="#">2</a>
+                <li id="pagination-2" class="page-item">
+                  <a class="page-link no-active" href="#">2</a>
                 </li>
               </ul>
             </nav>
@@ -120,6 +120,10 @@
             vilket betyder att man måste hinna ta sig mellan safe zones innan lagets poäng försvinner. Om man hinner ta sig
             in i en safezone så återställs tiden och man kan fortsätta leta.
           </p>
+          <div id="map" ></div> 
+          <script src="karta.js">            
+          </script>
+          <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script> 
         </section>
         <section class="index__leaderboard col-3">
           <div class="leaderborad__header" align = "center"><h1>Leaderboard</h1></div>
@@ -180,7 +184,17 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
     crossorigin="anonymous"></script>
   <script>
-    const formHide = document.querySelector("#formSignIn").style.display = "none";
+    const signIn = document.querySelector("#formSignIn").style.display = "none";
+    const signUp = document.querySelector("#formSignUp").style.display = "block";
+
+    const pagi1 = document.querySelector("#pagination-1");
+    const pagi2 = document.querySelector("#pagination-2");
+
+    if(signUp === "block") {
+      pagi1.classList.add("active")
+    }else if(signIn === "block"){
+      pagi2.classList.add("active");
+    }
   </script>
 </body>
 
