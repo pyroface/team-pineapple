@@ -237,3 +237,23 @@ body > main > section.index__login > div > nav > ul > li:nth-child(1) > a {
     padding: 0;
     text-align: center;
   }
+
+  
+ul {
+    list-style-type: none;
+}
+
+.index__leaderboard {
+    background-color: var(--yellow);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    /* border: 1px solid var(--green); */
+    text-align: left;
+    padding: 8px;
+}
