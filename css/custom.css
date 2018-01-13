@@ -185,29 +185,78 @@ Includes support for 25%, 50%, 75%, and 100% by default. (Only height)
   }
 
   /* --- Variables end -----------*/
-  /* --- Grid content start -----------*/
-  .col1{
-    background: var(--grey);
-    padding: 0;
-    text-align: center;
-  }
-  .col2{
+
+
+
+.back {
+    background-image: url("../back.jpg");
+    background-size: cover;
+
+}
+
+.transparent {
+    width: 100%;
+    height: 100%;
+    background: rgba(245, 245, 245, 0.295)
+}
+
+.page-link {
+    background-color: transparent;
+    border: none;
+    color: var(--black);
+}
+
+.page-item.active .page-link {
+    background-color: var(--yellow);
+    border-color: var(--yellow);
+}
+.page-link:hover {
+    color: var(--black);
+    text-decoration: none;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.no-active {
+    pointer-events: none;
+}
+
+
+  .info{
     background: var(--green);
     padding: 0;
     text-align: center;
     border: 4px solid var(--yellow);
   }
-  .col3{
+
+  .leaderboard{
     background: var(--grey);
     padding: 0;
     text-align: center;
   }
-  .container{
-    max-width: 100%;
+
+  
+ul {
+    list-style-type: none;
+}
+
+.index__leaderboard {
+    background-color: var(--yellow);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    /* border: 1px solid var(--green); */
+    text-align: left;
+    padding: 8px;
+}
+  #map{
+     margin:100px;
+     width:400px;
+     height:400px;
   }
-  .row{
-    height: 100vh;
-  }
-  /* --- Grid content end -----------*/
-  /* --- Footer Start -----------*/
-  /* --- Footer End-----------*/
+
