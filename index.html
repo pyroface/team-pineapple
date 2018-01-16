@@ -97,7 +97,7 @@
               </div>
               <div class="form-group lead font-weight-bold color-black">
                 <label for="formGroupExampleInput2">Username</label>
-                <input id="username" minlength="1" maxlength="20" type="text" class="form-control" placeholder="Account name" required>
+                <input id="username" type="text" class="form-control" placeholder="Account name" required>
                 <div class="invalid-feedback text-white">
                     Please choose a username.
                   </div>
@@ -105,7 +105,7 @@
               <div class="form-row mt-4 p-2">
                 <div class="font-weight-bold color-black">
                   <label for="formGroupExampleInput">Password</label>
-                  <input id="password" minlength="1" maxlength="20" type="password" class="col-11 form-control" placeholder="password" required>
+                  <input id="password" type="password" class="col-11 form-control" placeholder="password" required>
                   <div class="invalid-feedback text-danger">
                       Please choose a password.
                     </div>
@@ -119,15 +119,15 @@
           </div>
         </section>
 
-        <section class="index__info col-md-6 col-sm-12 info">
-        <section><h1>Information</h1>
+        <section class="index__info col-md-6 col-sm-12 info p-2">
+        <h1>Information</h1>
           <p>
             Ska fungera som skattjakt. För varje 10:e meter så har man en chans på loot/skatter(röda stjärnorna). Skatterna kan innehålla
             rikedomar i form av coins. Coins fungerar som poäng. Coinsen är osäkrade och det finns en chans att förlora dom
             om man inte lyckas ta dom till en safe zone(svarta ringarna) för att säkra dom för sitt lag. Spelet går på tid
             vilket betyder att man måste hinna ta sig mellan safe zones innan lagets poäng försvinner. Om man hinner ta sig
             in i en safezone så återställs tiden och man kan fortsätta leta.
-          </p></section>
+          </p>
           <div id="map" ></div> 
           <script src="map.js">            
           </script>
