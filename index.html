@@ -97,7 +97,7 @@
               </div>
               <div class="form-group lead font-weight-bold color-black">
                 <label for="formGroupExampleInput2">Username</label>
-                <input type="text" class="form-control" placeholder="Account name" required>
+                <input id="username" minlength="1" maxlength="20" type="text" class="form-control" placeholder="Account name" required>
                 <div class="invalid-feedback text-white">
                     Please choose a username.
                   </div>
@@ -105,7 +105,7 @@
               <div class="form-row mt-4 p-2">
                 <div class="font-weight-bold color-black">
                   <label for="formGroupExampleInput">Password</label>
-                  <input type="password" class="col-11 form-control" placeholder="password" required>
+                  <input id="password" minlength="1" maxlength="20" type="password" class="col-11 form-control" placeholder="password" required>
                   <div class="invalid-feedback text-danger">
                       Please choose a password.
                     </div>
@@ -209,25 +209,66 @@
 
     
 
-    buttonSubmit = document.querySelector('#button-submit');
+    const buttonSubmit = document.querySelector('#button-submit')
+   
+    
+    removeBorder = () => {
+          const forms = [...document.querySelectorAll('.form-control')]
+          const validations = [...document.querySelectorAll('.invalid-feedback')]
+            forms.map(form => form.classList.remove('border-danger', 'red-shadow')),
+              validations.map(valid => valid.style.display = 'none');
+        }
 
 
-        //FORM-VALIDATION ERROR
+      function modal() {
 
-            validationForms = () => {
-              const forms = [...document.querySelectorAll('.form-control')]
-              const validations = [...document.querySelectorAll('.invalid-feedback')]
-              if (forms.value == null) {
-                forms.map(form => form.classList.add('border-danger', 'red-shadow')),
-                  validations.map(valid => valid.style.display = 'block');
-              }
-            }
+        const signIn = document.querySelector("#formSignIn").style.display = "block";
+        const signUp = document.querySelector("#formSignUp").style.display = "none";
+
+        const pagi1 = document.querySelector("#pagination-1");
+        const pagi2 = document.querySelector("#pagination-2");
 
 
-        
-         buttonSubmit.addEventListener('click', validationForms)
+
+        function alert() {
+          swal("Account created!", "", "success")
+        }
+
+        function removePage() {
+          if (signIn === "block") {
+            pagi2.classList.add("active")
+            pagi1.classList.remove("active")
+          }
+        }
+
+        alert();
+        removePage();
+        removeBorder();
+      }
+
+
+
+
+        //FORM-VALIDATION ERROR 
+        //validationsForms() ska köras om det blir fel
+
+
+        validationForms = () => {
+          const forms = [...document.querySelectorAll('.form-control')]
+          const validations = [...document.querySelectorAll('.invalid-feedback')]
+            forms.map(form => form.classList.add('border-danger', 'red-shadow')),
+              validations.map(valid => valid.style.display = 'block');
+        }
+
+
+          
  
-        //const forms = [...document.querySelectorAll('input[type="text"],input[type="password"]')]
+        
+         buttonSubmit.addEventListener('dblclick', modal)
+         buttonSubmit.addEventListener('click', validationForms)
+         
+ 
+      
       </script>
 </body>
 
