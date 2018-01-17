@@ -4,5 +4,5 @@ function myMap() {
         zoom:9,
         mapTypeId: google.maps.MapTypeId.ROADMAP
    }
-var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+var map = new google.maps.Map(document.querySelector(".map"), mapOptions);
 } 
