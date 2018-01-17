@@ -240,6 +240,8 @@ ul {
     list-style-type: none;
 }
 
+/*----Leaderboard styling---- */
+
 .index__leaderboard {
     background-color: var(--yellow);
 }
@@ -254,6 +256,13 @@ td, th {
     text-align: left;
     padding: 8px;
 }
+
+tr:nth-child(even) {
+    background-color: var(--green);
+}
+
+/*----Leaderboard styling ends---- */
+
   #map{
      margin:100px;
      width:400px;
