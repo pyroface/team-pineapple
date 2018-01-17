@@ -272,4 +272,10 @@ td, th {
 
   /* ----Form validation ends--- */
 
+  @media only screen and (min-width: 756px) {
+    .index__header {
+        display: none;
+    }
+}
+
 
