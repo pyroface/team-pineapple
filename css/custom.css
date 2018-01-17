@@ -188,6 +188,11 @@ Includes support for 25%, 50%, 75%, and 100% by default. (Only height)
 
 
 
+
+
+
+/* -- index__login -------------- */
+
 .back {
     background-image: url("../back.jpg");
     background-size: cover;
@@ -221,6 +226,13 @@ Includes support for 25%, 50%, 75%, and 100% by default. (Only height)
     pointer-events: none;
 }
 
+/* index__login end--------------- */
+
+
+
+
+
+/* -------- index__info --------- */
 
   .info{
     background: var(--green);
@@ -229,16 +241,15 @@ Includes support for 25%, 50%, 75%, and 100% by default. (Only height)
     border: 4px solid var(--yellow);
   }
 
-  .leaderboard{
-    background: var(--grey);
-    padding: 0;
-    text-align: center;
-  }
+/* -------- index__info end --------- */
+
+
 
   
-ul {
-    list-style-type: none;
-}
+
+
+/* ------- index__leaderboard ------------  */
+
 
 .index__leaderboard {
     background-color: var(--yellow);
@@ -254,13 +265,37 @@ td, th {
     text-align: left;
     padding: 8px;
 }
+
+
+
+/* ------- index__leaderboard end ---------  */
+
+
+
+/*------------  index__map -------------- */
+
   #map{
      margin:100px;
      width:400px;
      height:400px;
   }
 
+
+  /*------------  index__map end -------------- */
+
+
+
+
+ /*--------  profile section  ------------- */
+
+  .progress {
+      background-color: #fff;
+  }
   
+ /* -------- profile section ends ----------------- */
+  
+  
+
   /*---- Form validation---- */
 
   .red-shadow {
