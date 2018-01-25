@@ -39,7 +39,56 @@ function showMap(lat, lon) {
       title: 'Found you!'
   });
 
- // Custom marker 
+// Skriv om koden med lat och lng 
+  // var places = [
+  //   [59.314951, 18.115454],
+  //   [59.311710, 18.110991],
+  //   [59.311973, 18.104467],
+  //   [59.313309, 18.107815],
+  //   [59.312936, 18.112192]
+  // ];
+
+  var places = [
+    {
+      lat: 59.314951,
+      lng: 18.115454
+    },
+    {
+      lat: 59.311710,
+      lng: 18.110991
+    }, 
+  ]
+
+
+
+
+
+  places.forEach(function (place) {
+
+    // Custom marker 
+    var icon = {
+      url: "coints.png", // url
+      scaledSize: new google.maps.Size(50, 50), // scaled size
+      origin: new google.maps.Point(0, 0), // origin
+      anchor: new google.maps.Point(0, 0) // anchor
+    };
+
+
+    var coinMarker = new google.maps.Marker({
+      // position: { lat: 59.312584, lng: 18.108769 },
+      
+      position: { lat: place.lat, lng: place.lng },
+      map: map,
+      icon: icon
+    });
+  })
+
+
+
+
+
+
+/*  // Custom marker 
  var icon = {
   url: "coints.png", // url
   scaledSize: new google.maps.Size(50, 50), // scaled size
@@ -52,5 +101,5 @@ function showMap(lat, lon) {
     position: {lat: 59.312584, lng: 18.108769},
     map: map,
     icon: icon
-  });
+  }); */
 }
