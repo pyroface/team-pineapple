@@ -39,10 +39,18 @@ function showMap(lat, lon) {
       title: 'Found you!'
   });
 
-  var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
-  var beachMarker = new google.maps.Marker({
+ // Custom marker 
+ var icon = {
+  url: "coints.png", // url
+  scaledSize: new google.maps.Size(50, 50), // scaled size
+  origin: new google.maps.Point(0,0), // origin
+  anchor: new google.maps.Point(0, 0) // anchor
+};
+
+
+  var coinMarker = new google.maps.Marker({
     position: {lat: 59.312584, lng: 18.108769},
     map: map,
-    icon: image
+    icon: icon
   });
 }
