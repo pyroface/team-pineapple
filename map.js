@@ -1,40 +1,41 @@
-      // Note: This example requires that you consent to location sharing when
-      // prompted by your browser. If you see the error "The Geolocation service
-      // failed.", it means you probably did not give permission for the browser to
-      // locate you.
-      var map, infoWindow;
-      function initMap() {
-        map = new google.maps.Map(document.querySelector('.map'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 6
-        });
-        infoWindow = new google.maps.InfoWindow;
+window.onload = function() {
 
-        // Try HTML5 geolocation.
-        if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(function(position) {
-            var pos = {
-              lat: position.coords.latitude,
-              lng: position.coords.longitude
-            };
+	// Check to see if the browser supports the GeoLocation API.
+	if (navigator.geolocation) {
+		// Get the location
+		navigator.geolocation.getCurrentPosition(function(position) {
+			var lat = position.coords.latitude;
+			var lon = position.coords.longitude;
 
-            infoWindow.setPosition(pos);
-            infoWindow.setContent('Location found.');
-            infoWindow.open(map);
-            map.setCenter(pos);
-          }, function() {
-            handleLocationError(true, infoWindow, map.getCenter());
-          });
-        } else {
-          // Browser doesn't support Geolocation
-          handleLocationError(false, infoWindow, map.getCenter());
-        }
-      }
+			// Show the map
+			showMap(lat, lon);
+		});
+	} else {
+		// Print out a message to the user.
+		document.write('Your browser does not support GeoLocation :(');
+	}
 
-      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-        infoWindow.setPosition(pos);
-        infoWindow.setContent(browserHasGeolocation ?
-                              'Error: The Geolocation service failed.' :
-                              'Error: Your browser doesn\'t support geolocation.');
-        infoWindow.open(map);
-      }
+}
+
+// Show the user's position on a Google map.
+function showMap(lat, lon) {
+	// Create a LatLng object with the GPS coordinates.
+	var myLatLng = new google.maps.LatLng(lat, lon);
+
+	// Create the Map Options
+  var mapOptions = {
+    zoom: 17,
+    center: myLatLng,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+
+  // Generate the Map
+  var map = new google.maps.Map(document.querySelector('.map'), mapOptions);
+
+  // Add a Marker to the Map
+  var marker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+      title: 'Found you!'
+  });
+}
