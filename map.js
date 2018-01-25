@@ -38,4 +38,11 @@ function showMap(lat, lon) {
       map: map,
       title: 'Found you!'
   });
+
+  var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+  var beachMarker = new google.maps.Marker({
+    position: {lat: 59.312584, lng: 18.108769},
+    map: map,
+    icon: image
+  });
 }
