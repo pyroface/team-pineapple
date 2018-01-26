@@ -1,19 +1,31 @@
-window.onload = function() {
+window.onload = function () {
 
-	// Check to see if the browser supports the GeoLocation API.
-	if (navigator.geolocation) {
-		// Get the location
-		navigator.geolocation.getCurrentPosition(function(position) {
-			var lat = position.coords.latitude;
-			var lon = position.coords.longitude;
+    // Check to see if the browser supports the GeoLocation API.
+    if (navigator.geolocation) {
+        // Get the location
+        navigator.geolocation.getCurrentPosition(function (position) {
+            var lat = position.coords.latitude;
+            var lon = position.coords.longitude;
 
-			// Show the map
-			showMap(lat, lon);
-		});
-	} else {
-		// Print out a message to the user.
-		document.write('Your browser does not support GeoLocation :(');
-	}
+            // Show the map
+            showMap(lat, lon);
+        });
+    } else {
+        // Print out a message to the user.
+        document.write('Your browser does not support GeoLocation :(');
+    }
+
+    if (navigator.geolocation) {
+        watchId = navigator.geolocation.watchPosition(trackPosition),
+        {
+            timeout: 0,
+            enableHighAccuracy: true,
+            maximumAge: Infinity
+        }
+    } else {
+        // Print out a message to the user.
+        document.write('Your browser does not support GeoLocation :(');
+    }
 
 }
 
@@ -328,8 +340,9 @@ function showMap(lat, lon) {
       map: map,
       title: 'Found you!'
   });
-	//Tracking users position
-watchId = navigator.geolocation.watchPosition(
+    //Tracking users position
+    
+/* watchId = navigator.geolocation.watchPosition(
      processGeolocation,
      // Optional settings below
      geolocationError,
@@ -338,7 +351,7 @@ watchId = navigator.geolocation.watchPosition(
          enableHighAccuracy: true,
          maximumAge: Infinity
      }
-);
+); */
 
 // Skriv om koden med lat och lng
   // var places = [
@@ -396,24 +409,8 @@ watchId = navigator.geolocation.watchPosition(
       icon: icon
     });
   })
+}
 
-
-
-
-
-
-/*  // Custom marker
- var icon = {
-  url: "coints.png", // url
-  scaledSize: new google.maps.Size(50, 50), // scaled size
-  origin: new google.maps.Point(0,0), // origin
-  anchor: new google.maps.Point(0, 0) // anchor
-};
-
-
-  var coinMarker = new google.maps.Marker({
-    position: {lat: 59.312584, lng: 18.108769},
-    map: map,
-    icon: icon
-  }); */
+function trackPosition(lat, lon){
+    var myLatLng = new google.maps.LatLng(lat, lon);
 }
