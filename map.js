@@ -328,6 +328,17 @@ function showMap(lat, lon) {
       map: map,
       title: 'Found you!'
   });
+	//Tracking users position
+watchId = navigator.geolocation.watchPosition(
+     processGeolocation,
+     // Optional settings below
+     geolocationError,
+     {
+         timeout: 0,
+         enableHighAccuracy: true,
+         maximumAge: Infinity
+     }
+);
 
 // Skriv om koden med lat och lng
   // var places = [
