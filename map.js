@@ -3,9 +3,14 @@ window.onload = function () {
     // Check to see if the browser supports the GeoLocation API.
     if (navigator.geolocation) {
         // Get the location
-        navigator.geolocation.getCurrentPosition(function (position) {
+        navigator.geolocation.watchPosition(function (position, autopos) {
             var lat = position.coords.latitude;
             var lon = position.coords.longitude;
+            var autopos =    {
+                timeout: 1000,
+                enableHighAccuracy: true,
+                maximumAge: Infinity
+            } 
 
             // Show the map
             showMap(lat, lon);
@@ -15,17 +20,17 @@ window.onload = function () {
         document.write('Your browser does not support GeoLocation :(');
     }
 
-    if (navigator.geolocation) {
+/*     if (navigator.geolocation) {
         watchId = navigator.geolocation.watchPosition(trackPosition),
         {
-            timeout: 0,
+            timeout: 1000,
             enableHighAccuracy: true,
             maximumAge: Infinity
         }
     } else {
         // Print out a message to the user.
         document.write('Your browser does not support GeoLocation :(');
-    }
+    } */
 
 }
 
