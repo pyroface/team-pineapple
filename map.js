@@ -3,10 +3,11 @@ window.onload = function () {
     // Check to see if the browser supports the GeoLocation API.
     if (navigator.geolocation) {
         // Get the location
-        navigator.geolocation.watchPosition(function (position, autopos) {
+        navigator.geolocation.watchPosition(function (position, updatePos) {
             var lat = position.coords.latitude;
             var lon = position.coords.longitude;
-            var autopos =    {
+            // Refresh the position
+            var updatePos =    {
                 timeout: 1000,
                 enableHighAccuracy: true,
                 maximumAge: Infinity
@@ -20,17 +21,7 @@ window.onload = function () {
         document.write('Your browser does not support GeoLocation :(');
     }
 
-/*     if (navigator.geolocation) {
-        watchId = navigator.geolocation.watchPosition(trackPosition),
-        {
-            timeout: 1000,
-            enableHighAccuracy: true,
-            maximumAge: Infinity
-        }
-    } else {
-        // Print out a message to the user.
-        document.write('Your browser does not support GeoLocation :(');
-    } */
+
 
 }
 
@@ -44,6 +35,8 @@ function showMap(lat, lon) {
     zoom: 17,
     center: myLatLng,
     mapTypeId: google.maps.MapTypeId.ROADMAP,
+
+    // Pokemon go theme styling
 		styles:[
     {
         "featureType": "administrative",
@@ -345,27 +338,9 @@ function showMap(lat, lon) {
       map: map,
       title: 'Found you!'
   });
-    //Tracking users position
-    
-/* watchId = navigator.geolocation.watchPosition(
-     processGeolocation,
-     // Optional settings below
-     geolocationError,
-     {
-         timeout: 0,
-         enableHighAccuracy: true,
-         maximumAge: Infinity
-     }
-); */
 
-// Skriv om koden med lat och lng
-  // var places = [
-  //   [59.314951, 18.115454],
-  //   [59.311710, 18.110991],
-  //   [59.311973, 18.104467],
-  //   [59.313309, 18.107815],
-  //   [59.312936, 18.112192]
-  // ];
+
+  // Object holding the coints lat and lng
 
   var places = [
     {
@@ -416,6 +391,3 @@ function showMap(lat, lon) {
   })
 }
 
-function trackPosition(lat, lon){
-    var myLatLng = new google.maps.LatLng(lat, lon);
-}
