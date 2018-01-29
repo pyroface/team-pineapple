@@ -332,11 +332,20 @@ function showMap(lat, lon) {
   // Generate the Map
   var map = new google.maps.Map(document.querySelector('.map'), mapOptions);
 
-  // Add a Marker to the Map
+  var cluster = {
+    url: "m3.png", // url
+    scaledSize: new google.maps.Size(50, 50), // scaled size
+    origin: new google.maps.Point(0, 0), // origin
+    anchor: new google.maps.Point(0, 0) // anchor
+  };
+
+
+  // Add a Marker to the Map(Our marker)
   var marker = new google.maps.Marker({
       position: myLatLng,
       map: map,
-      title: 'Found you!'
+      title: 'John Doe!',
+      icon: cluster
   });
 
 
