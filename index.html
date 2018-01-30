@@ -49,7 +49,7 @@
     <div class="container mw-100">
 
       <div class="row">
-        <section class="index__login col-md-3 col-sm-12 back p-0">
+       <!--  <section class="index__login col-md-3 col-sm-12 back p-0">
           <div class="transparent p-2">
             <nav aria-label="...">
               <ul class="pagination justify-content-end">
@@ -117,9 +117,101 @@
               <button id="button-submit" type="button" class="btn btn-secondary w-100 mt-3">Sign in</button>
             </form>
           </div>
+        </section> -->
+
+        <section class="index__profile col-md-3 col-sm-12 black-background ">
+          <img src="avatar.jpg" alt="game-avatar" class="img-thumbnail rounded mx-auto d-block h-25 mt-25 rounded-circle">
+          <h1 class="text-light text-center">Joe Doe</h1>
+
+
+              <!-- Trophy-bar -->
+
+          <div class="row mt-5">
+          
+            <div class="pl-2">
+              <a class="mr-2 d-inline" href="#">
+                <img src="trophy.png" width="40" height="40" class="" alt="">
+              </a>
+            </div>
+                 
+            <div class="progress w-75 mt-2" style="height: 20px;">
+              <div class="progress-bar d-inline   bg-secondary mw-100" role="progressbar  " style="width: 75%;" aria-valuenow="75" aria-valuemin="0"
+                aria-valuemax="100">75%</div>
+            </div>
+          
+          </div>
+
+          <!-- Trophy bar ends -->
+
+
+          <!-- Task-bar done -->
+
+
+          <div class="row mt-5">
+
+          <div class="pl-2">
+            <a class="mr-2 d-inline" href="#">
+              <img src="done.svg" width="40" height="40" class="" alt="">
+            </a>
+          </div>
+                
+          <div class="w-75 mt-1 ml-1 rounded" style="background: #06ef69e0;">
+            <h5 class="p-0 mt-0 mb-0 text-nowrap">GO TO KUNGSHALLEN!</h5>
+          </div>
+        
+        </div>
+
+        <!-- Task-bar done ends -->
+
+
+           <!-- Task-bar done -->
+
+          
+          <div class="row mt-5">
+          
+            <div class="pl-2">
+              <a class="mr-2 d-inline" href="#">
+                <img src="done.svg" width="40" height="40" class="" alt="">
+              </a>
+            </div>
+                 
+            <div class="w-75 mt-1 ml-1 rounded" style="background: #06ef69e0;">
+              <h5 class="p-0 mt-0 mb-0 text-nowrap">FIND A TREASURE CHEST!</h5>
+            </div>
+          
+          </div>
+
+          <!-- Task-bar done ends -->
+
+
+            <!-- Task-bar undone -->
+            
+            
+            <div class="row mt-5">
+            
+              <div class="pl-2">
+                <a class="mr-2 d-inline" href="#">
+                  <img src="undone.svg" width="40" height="40" class="" alt="">
+                </a>
+              </div>
+            
+              <div class="w-75 mt-1 ml-1 rounded" style="background: #06ef69e0;">
+                <h5 class="p-0 mt-0 mb-0 text-nowrap" style="color: #637486">FIND THREE COINTS!</h5>
+              </div>
+            
+            </div>
+            
+            <!-- Task-bar undone ends -->
+
+
+
         </section>
 
-        <section class="index__info col-md-6 col-sm-12 info p-2">
+
+
+        <!-- index__info start -->
+
+<!--         <section class="index__info col-md-6 col-sm-12 info p-2">
         <h1>Information</h1>
           <p>
             Ska fungera som skattjakt. För varje 10:e meter så har man en chans på loot/skatter(röda stjärnorna). Skatterna kan innehålla
@@ -128,11 +220,26 @@
             vilket betyder att man måste hinna ta sig mellan safe zones innan lagets poäng försvinner. Om man hinner ta sig
             in i en safezone så återställs tiden och man kan fortsätta leta.
           </p>
-          <div id="map" ></div> 
+        </section> -->
+
+        <!-- index__info ends -->
+
+
+
+
+
+        <!-- index__map start -->
+
+        <section class="index__map col-md-6 col-sm-12 p-2 map">
           <script src="map.js">            
           </script>
-          <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script> 
+          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2zN8wobSAuw_ejpGz9ll31ZMQL-iV7JE" type="text/javascript"></script>
         </section>
+
+        <!-- index__map ends -->
+
+
+        <!-- index__leaderboard start -->
         <section class="index__leaderboard col-md-3 col-sm-12">
           <div class="leaderborad__header" align = "center"><h1>Leaderboard</h1></div>
           <div class "leaderboard-stats">
@@ -175,7 +282,35 @@
             </table>
             
           </div>
+
+                  <!-- index__group -->
+
+    <section class="index__group mt-3 vh-50 green-background">
+
+      <h2>Group name</h2>
+      <div class="users">
+        <div class="user " style="background: #1c7d44;" >
+          <p class="yellow-background">  Homer Simpsons &emsp;  4589 </p>
+        </div>
+        <div class="user " style="background: #1c7d44;">
+          <p class="grey-background">xXD34th_R4mb0Xx &emsp; 1927 </p>
+        </div>
+        <div class="user grey-background" style="background: #1c7d44;">
+          <p class="yellow-background">----- ---- ---- </p>
+        </div>
+        <div class="user grey-background" style="background: #1c7d44;">
+          <p class="grey-background">----- ---- ---- </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- index__group end -->
         </section>
+
+        <!-- index__leaderboard end -->
+
+
+
       </div>
     </div>
     </div>
@@ -192,7 +327,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
     crossorigin="anonymous"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <script>
+<!--   <script>
     const signIn = document.querySelector("#formSignIn").style.display = "none";
     const signUp = document.querySelector("#formSignUp").style.display = "block";
 
@@ -204,8 +339,8 @@
     }else if(signIn === "block"){
       pagi2.classList.add("active");
     }
-  </script>
-  <script>
+  </script> -->
+<!--   <script>
 
     
 
@@ -267,9 +402,9 @@
          buttonSubmit.addEventListener('dblclick', modal)
          buttonSubmit.addEventListener('click', validationForms)
          
- 
+
       
-      </script>
+      </script> -->
 </body>
 
 </html>
