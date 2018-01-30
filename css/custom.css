@@ -254,7 +254,7 @@ Includes support for 25%, 50%, 75%, and 100% by default. (Only height)
 
 
 
-  
+
 
 
 /* ------- index__leaderboard ------------  */
@@ -278,7 +278,7 @@ td, th {
 tr:nth-child(even) {
       background-color: var(--green);
     }
-   
+
 
 
 
@@ -291,7 +291,7 @@ tr:nth-child(even) {
 .map {
     height: 110vh;
 }
-  
+
 
 
 
@@ -305,10 +305,10 @@ tr:nth-child(even) {
   .progress {
       background-color: #fff;
   }
-  
+
  /* -------- profile section ends ----------------- */
-  
-  
+
+
 
   /*---- Form validation---- */
 
@@ -353,5 +353,39 @@ h2{
 
 
 /* -------- index__group end --------- */
+/* -------- Map timer start --------- */
+h1{
+  color: #396;
+  font-weight: 100;
+  font-size: 40px;
+  margin: 40px 0px 20px;
+}
 
+#clockdiv{
+	font-family: sans-serif;
+	font-weight: 100;
+	text-align: center;
+	font-size: 30px;
+  position: absolute;
+  left:44%;
 
+}
+
+#clockdiv > div{
+	padding: 10px;
+	border-radius: 3px;
+	background: #00BF96;
+	display: inline-block;
+}
+
+#clockdiv div > span{
+	padding: 15px;
+	border-radius: 3px;
+	background: #00816A;
+}
+
+.smalltext{
+	padding-top: 5px;
+	font-size: 16px;
+}
+/* -------- Map timer end --------- */
