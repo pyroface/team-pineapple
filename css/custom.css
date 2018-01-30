@@ -276,7 +276,6 @@ td, th {
     text-align: left;
     padding: 8px;
 }
-<<<<<<< HEAD
 
 tr:nth-child(even) {
     background-color: var(--green);
@@ -289,8 +288,6 @@ tr:nth-child(even) {
      width:400px;
      height:400px;
   }
-=======
->>>>>>> dc523d331bb74ac2e3c5b447288b2e409ef41539
 
 tr:nth-child(even) {
       background-color: var(--green);
@@ -309,6 +306,10 @@ tr:nth-child(even) {
     height: 110vh;
 }
   
+#indexInfo {
+    background-color: var(--green);
+    height: 110vh;
+}
 
 
 
