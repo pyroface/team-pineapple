@@ -305,15 +305,28 @@ tr:nth-child(even) {
 .map {
     height: 110vh;
 }
+
+/*------------  index__map end -------------- */
+
+
+/* ------------ info-page-styling ------------ */
   
 #indexInfo {
     background-color: var(--green);
     height: 110vh;
 }
 
+.info-text {
+    margin-top: 3em;
+    padding: 0 2em;
+    line-height: 1.5em;
+}
+
+/* ------------ info-page-styling end ------------ */
 
 
-  /*------------  index__map end -------------- */
+
+
 
 
 
@@ -377,5 +390,9 @@ h2{
 
 
 /* -------- index__group end --------- */
+
+.playButton {
+    margin-top: 5em;
+}
 
 

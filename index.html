@@ -239,13 +239,17 @@
         <!-- index__map ends -->
 
         <section id="indexInfo" style="display:block;" class="answer_list col-md-6 col-sm-12 p-2">
-          <h1 align="center">INFO</h1>
-          <p align="center">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus nibh a porta feugiat. 
-            Nulla sollicitudin tellus elit, commodo dignissim mi molestie sed. Aliquam porta eget libero ut accumsan. 
-            Suspendisse venenatis urna eget sem hendrerit, vestibulum mollis libero cursus.
-          </p>
-          <div class="text-center"><input type="button" name="answer" value="PLAY!" class="btn btn-warning" onclick="showSection()" /></div>
+          <h1 class="text-center">Information</h1>
+          <h5 class="info-text text-center">
+              Ska fungera som skattjakt. För varje 10:e meter så har man en chans på loot/skatter(röda stjärnorna). Skatterna kan innehålla
+              rikedomar i form av coins. Coins fungerar som poäng. Coinsen är osäkrade och det finns en chans att förlora dom
+              om man inte lyckas ta dom till en safe zone(svarta ringarna) för att säkra dom för sitt lag. Spelet går på tid
+              vilket betyder att man måste hinna ta sig mellan safe zones innan lagets poäng försvinner. Om man hinner ta sig
+              in i en safezone så återställs tiden och man kan fortsätta leta.
+          </h5>
+          <div class="text-center playButton">
+            <input type="button" name="answer" value="PLAY!" class="btn-lg btn-warning" onclick="showSection()" />
+          </div>
         </section>
         <script>
           function showSection() {
