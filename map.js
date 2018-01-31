@@ -11,7 +11,7 @@ window.onload = function () {
                 timeout: 1000,
                 enableHighAccuracy: true,
                 maximumAge: Infinity
-            }
+            } 
 
             // Show the map
             showMap(lat, lon);
@@ -32,7 +32,7 @@ function showMap(lat, lon) {
 
 	// Create the Map Options
   var mapOptions = {
-    zoom: 17,
+    zoom: 19,
     center: myLatLng,
     mapTypeId: google.maps.MapTypeId.ROADMAP,
 
@@ -351,7 +351,7 @@ function showMap(lat, lon) {
 
   // Object holding the coints lat and lng
 
-  var places = [
+/*   var places = [
     {
       lat: 59.314951,
       lng: 18.115454
@@ -362,24 +362,28 @@ function showMap(lat, lon) {
     },
 		{
       lat: 59.311973,
-      lng: 18.104467,
+      lng: 18.104467
     },
 		{
       lat: 59.313309,
-      lng: 18.107815,
+      lng: 18.107815
     },
 		{
       lat: 59.312936,
-      lng: 18.112192,
+      lng: 18.112192
+    },
+		{
+      lat: 59.313453,
+      lng: 18.110635
     },
 
   ]
+ */
 
 
 
 
-
-  places.forEach(function (place) {
+/*   places.forEach(function (place) {
 
     // Custom marker
     var icon = {
@@ -397,40 +401,338 @@ function showMap(lat, lon) {
       map: map,
       icon: icon
     });
-  })
+  }) */
+
+
+      // Coin 1
+      var icon1 = {
+        url: "coints.png", // url
+        scaledSize: new google.maps.Size(50, 50), // scaled size
+        origin: new google.maps.Point(0, 0), // origin
+        anchor: new google.maps.Point(0, 0) // anchor
+      };
+
+   
+  
+  
+      var coin1 = new google.maps.Marker({
+         position: 
+         { lat: 59.313453, 
+           lng: 18.110636 
+         },
+        map: map,
+        icon: icon1
+      });
+
+      // Coin 2
+      var icon2 = {
+        url: "coints.png", // url
+        scaledSize: new google.maps.Size(50, 50), // scaled size
+        origin: new google.maps.Point(0, 0), // origin
+        anchor: new google.maps.Point(0, 0) // anchor
+      };
+
+   
+  
+  
+      var coin2 = new google.maps.Marker({
+         position: 
+         { lat: 59.311710, 
+           lng: 18.110991 
+         },
+        map: map,
+        icon: icon2
+      });
+
+      
+      // Coin 3
+      var icon3 = {
+        url: "coints.png", // url
+        scaledSize: new google.maps.Size(50, 50), // scaled size
+        origin: new google.maps.Point(0, 0), // origin
+        anchor: new google.maps.Point(0, 0) // anchor
+      };
+
+   
+  
+  
+      var coin3 = new google.maps.Marker({
+         position: 
+         { lat: 59.311973, 
+           lng: 18.104467
+         },
+        map: map,
+        icon: icon3
+      });
+
+      // Coin 4
+      var icon4 = {
+        url: "coints.png", // url
+        scaledSize: new google.maps.Size(50, 50), // scaled size
+        origin: new google.maps.Point(0, 0), // origin
+        anchor: new google.maps.Point(0, 0) // anchor
+      };
+
+   
+  
+  
+      var coin4 = new google.maps.Marker({
+         position: 
+         { lat: 59.313309, 
+           lng: 18.107815
+         },
+        map: map,
+        icon: icon4
+      });
+
+      
+
+  
+      // Coin 5
+      var icon5 = {
+        url: "treasure.png", // url
+        scaledSize: new google.maps.Size(50, 50), // scaled size
+        origin: new google.maps.Point(0, 0), // origin
+        anchor: new google.maps.Point(0, 0) // anchor
+      };
+
+   
+  
+  
+      var coin5 = new google.maps.Marker({
+         position: 
+         { lat: 59.312936, 
+           lng: 18.112192
+         },
+        map: map,
+        title: 'Bonus!',
+        icon: icon5
+      });
+
+
+      //  Player 1
+      var player1 = {
+        url: "red_MarkerB.png", // url
+        scaledSize: new google.maps.Size(35, 35), // scaled size
+        origin: new google.maps.Point(0, 0), // origin
+        anchor: new google.maps.Point(0, 0) // anchor
+      };
+
+   
+  
+  
+      var red = new google.maps.Marker({
+         position: 
+         { lat: 59.311916, 
+           lng: 18.106931
+         },
+        map: map,
+        icon: player1
+      });
+
+      // Adding click player 1
+      red.addListener('click', function() {
+        infowindow1.open(map, red);
+      });
+
+
+
+      var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h6 id="firstHeading" class="firstHeading">Player 1</h6>'+
+            '<div id="bodyContent">'+
+            '<p>50%</p>'+
+            '</div>'+
+            '</div>';
+
+            var infowindow1 = new google.maps.InfoWindow({
+                content: contentString
+              });
+        
+      
+      //  Player 2
+      var player2 = {
+        url: "blue_MarkerB.png", // url
+        scaledSize: new google.maps.Size(35, 35), // scaled size
+        origin: new google.maps.Point(0, 0), // origin
+        anchor: new google.maps.Point(0, 0) // anchor
+      };
+
+   
+  
+  
+      var blue = new google.maps.Marker({
+         position: 
+         { lat: 59.310835, 
+           lng: 18.111214
+         },
+        map: map,
+        icon: player2
+      });
+
+      // Adding click player 2
+      blue.addListener('click', function() {
+        infowindow2.open(map, blue);
+      });
+
+
+
+      var contentString2 = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h6 id="firstHeading" class="firstHeading">Player 2</h6>'+
+            '<div id="bodyContent">'+
+            '<p>10%</p>'+
+            '</div>'+
+            '</div>';
+
+            var infowindow2 = new google.maps.InfoWindow({
+                content: contentString2
+              });
+        
+      
+      //  Player 3
+      var player3 = {
+        url: "yellow_MarkerA.png", // url
+        scaledSize: new google.maps.Size(30, 30), // scaled size
+        origin: new google.maps.Point(0, 0), // origin
+        anchor: new google.maps.Point(0, 0) // anchor
+      };
+
+   
+  
+  
+      var yellow = new google.maps.Marker({
+         position: 
+         { lat: 59.313271, 
+           lng: 18.116192
+         },
+        map: map,
+        icon: player3
+      });
+
+      // Adding click player 3
+      yellow.addListener('click', function() {
+        infowindow3.open(map, yellow);
+      });
+
+
+
+      var contentString3 = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h6 id="firstHeading" class="firstHeading">Player 3</h6>'+
+            '<div id="bodyContent">'+
+            '<p>35%</p>'+
+            '</div>'+
+            '</div>';
+
+            var infowindow3 = new google.maps.InfoWindow({
+                content: contentString3
+              });
+        
+      
+
+  
+      
+      
+
+ 
+      
+      //console.log(coinMarker.position.lat());
+
+
+      // Parse the coint position!
+/*         parseInt(coinMarker.position.lat())
+        parseInt(coinMarker.position.lng())
+
+        parseInt(lat)
+        parseInt(lon)
+
+        console.log(parseInt(coinMarker.position.lat()))
+        
+        console.log(parseInt(coinMarker.position.lng()))
+     
+        console.log(parseInt(lat))
+
+        console.log(parseInt(lon)) */
+
+        //console.log(lat);
+        //console.log(coinMarker.position.lat())
+        //console.log(lon);
+        //console.log(coin1.position.lng())
+
+      
+      // remove marker coin 1
+      if(lat === coin1.position.lat() && lon === coin1.position.lng()) {
+      
+        delete icon1.url;
+        delete coin1.position;
+      }
+
+      // coin2
+      if(lat === coin2.position.lat() && lon === coin2.position.lng()) {
+      
+        delete icon2.url;
+        delete coin2.position;
+      }
+
+      // coin3
+      if(lat === coin3.position.lat() && lon === coin3.position.lng()) {
+      
+        delete icon3.url;
+        delete coin3.position;
+      }
+
+      // coin4
+      if(lat === coin4.position.lat() && lon === coin4.position.lng()) {
+      
+        delete icon4.url;
+        delete coin4.position;
+      }
+
+      // coin5
+      if(lat === coin5.position.lat() && lon === coin5.position.lng()) {
+      
+        delete icon5.url;
+        delete coin5.position;
+      }
 }
+
+
 // Map timer
 function getTimeRemaining(endtime) {
-  var t = Date.parse(endtime) - Date.parse(new Date());
-  var seconds = Math.floor((t / 1000) % 60);
-  var minutes = Math.floor((t / 1000 / 60) % 20);
-
-
-  return {
-    'total': t,
-    'minutes': minutes,
-    'seconds': seconds
-  };
-}
-
-function initializeClock(id, endtime) {
-  var clock = document.getElementById(id);
-  var minutesSpan = clock.querySelector('.minutes');
-  var secondsSpan = clock.querySelector('.seconds');
-
-  function updateClock() {
-    var t = getTimeRemaining(endtime);
-    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-
-    if (t.total <= 0) {
-      clearInterval(timeinterval);
-    }
+    var t = Date.parse(endtime) - Date.parse(new Date());
+    var seconds = Math.floor((t / 1000) % 60);
+    var minutes = Math.floor((t / 1000 / 60) % 20);
+  
+  
+    return {
+      'total': t,
+      'minutes': minutes,
+      'seconds': seconds
+    };
   }
-
-  updateClock();
-  var timeinterval = setInterval(updateClock, 1000);
-}
-
-var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
-initializeClock('clockdiv', deadline);
+  
+  function initializeClock(id, endtime) {
+    var clock = document.getElementById(id);
+    var minutesSpan = clock.querySelector('.minutes');
+    var secondsSpan = clock.querySelector('.seconds');
+  
+    function updateClock() {
+      var t = getTimeRemaining(endtime);
+      minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+      secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+  
+      if (t.total <= 0) {
+        clearInterval(timeinterval);
+      }
+    }
+  
+    updateClock();
+    var timeinterval = setInterval(updateClock, 1000);
+  }
+  
+  var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
+  initializeClock('clockdiv', deadline);
