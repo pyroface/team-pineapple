@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        body {
+            background: #718093;
+        } 
+    .mt-10 {
+        margin-top: 10%;
+    }
+    .ml-20 {
+        margin-left: 20%;
+    }
+    input {
+    border: none;
+    border-bottom: 2px solid #323330;
+    background: none;
+    color: #fff;
+    width: 25%;
+    font-size: 1.1rem;
+    }
+    *:focus {
+    outline: none !important;
+    }
+    *:active {
+        outline: none !important;
+    }
+    .relative {
+        position: absolute;
+        top: 20%;
+    }
+    .ml-40 {
+        margin-left: 40%;
+    }
+    .absolute {
+        position: absolute;
+        left: 66%;
+        top:19%;
+    }
+    .absolute5 {
+        position: absolute;
+        left: 72%;
+        top:19%;
+    }
+
+/* Första delen */
+
+.font-r {
+    font-size: 1.5rem;
+}
+.ml-80 {
+    margin-left: 70%;
+}
+
+
+/* .border {
+    padding: 2%;
+    border: 2px solid #585f66 !important;
+    border-radius: 5px !important; 
+} */
+
+.relative-list {
+    position: absolute;
+    top: 30%;
+}
+.ml-9 {
+    margin-left: 9rem;
+}
+    </style>
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <h1 class="mt-10 ml-20 font-weight-bold">Create a team</h1>
+    <form>
+    <input id="i" class="relative ml-40" type="text" placeholder="">
+    <button type="button" class="btn btn-dark absolute">Create</button>
+<!--     <button type="reset" class="btn btn-success w-25 absolute5">Clear!</button> -->
+    </form>
+
+    <!-- Första delen -->
+
+
+
+    <!-- andra delen -->
+
+        <div id="my-ui-list">
+
+      <ul id="foo" class="list-group w-25 ml-80 mt-5">
+            <li class="list-group-item list-group-item-dark text-primary rounded-0">Player 1</li>
+            <li class="list-group-item rounded-0">Player 2</li>
+            <li class="list-group-item list-group-item-dark text-primary rounded-0">Player 3</li>
+            <li class="list-group-item rounded-0">Player 4</li>
+            <li class="list-group-item list-group-item-dark text-primary rounded-0">Player 5</li>
+          </ul>
+
+      <ul id="bar" class="list-group w-25 ml-9 relative-list list">
+           <!--  <li class="list-group-item active text-center rounded-0 font-r">Your Team!</li> -->
+          </ul>
+
+        </div>
+
+          
+
+                    
+                    
+                  
+                    
+
+
+ 
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="Sortable.js"></script>
+
+<script>
+    const button = document.querySelector('.btn')
+
+
+
+
+    function show() {
+        const Input = document.querySelector("#i").value
+        // const item = document.createElement('li');
+        const Listitem = document.querySelector('.list');
+        const item = document.createElement("li");
+        Listitem.appendChild(item);
+        item.innerHTML = Input
+
+        item.classList.add('list-group-item', 'active', 'text-center', 'rounded-0', 'font-r')
+        item.innerHTML = Input
+        
+
+    
+        remove(), 1000;
+
+      
+    }
+
+    function remove() {
+
+    button.setAttribute('type', 'reset');
+    }
+
+
+    button.addEventListener('click', show);
+
+
+
+// drag and drop
+
+// Simple list
+var list = document.getElementById("my-ui-list");
+Sortable.create(list); // That's all.
+
+
+// Grouping
+var foo = document.getElementById("foo");
+Sortable.create(foo, { group: "omega" });
+
+var bar = document.getElementById("bar");
+Sortable.create(bar, { group: "omega" });
+
+
+
+
+</script>
+  </body>
+</html>
