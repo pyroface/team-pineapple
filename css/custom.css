@@ -306,27 +306,6 @@ tr:nth-child(even) {
     height: 110vh;
 }
 
-<<<<<<< HEAD
-/*------------  index__map end -------------- */
-
-
-/* ------------ info-page-styling ------------ */
-  
-#indexInfo {
-    background-color: var(--green);
-    height: 110vh;
-}
-
-.info-text {
-    margin-top: 3em;
-    padding: 0 2em;
-    line-height: 1.5em;
-}
-
-/* ------------ info-page-styling end ------------ */
-
-=======
->>>>>>> 9b94bcd3c4324b4a556e4b830c444c5ae14415b5
 
 
 
