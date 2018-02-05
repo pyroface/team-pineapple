@@ -435,3 +435,7 @@ h1{
 
     }
 /* -------- Map timer end --------- */
+
+#mySignUpModal {
+    z-index: 100;
+}
