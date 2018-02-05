@@ -187,20 +187,6 @@ Includes support for 25%, 50%, 75%, and 100% by default. (Only height)
   /* --- Variables end -----------*/
 
 
-/* -------- index__header --------- */
-
-  @media only screen and (min-width: 756px) {
-        .index__header {
-            display: none;
-        }
-    }
-
-/* -------- index__header end --------- */
-
-
-
-
-/* -- index__login -------------- */
 
 .back {
     background-image: url("../back.jpg");
@@ -235,13 +221,6 @@ Includes support for 25%, 50%, 75%, and 100% by default. (Only height)
     pointer-events: none;
 }
 
-/* index__login end--------------- */
-
-
-
-
-
-/* -------- index__info --------- */
 
   .info{
     background: var(--green);
@@ -250,17 +229,16 @@ Includes support for 25%, 50%, 75%, and 100% by default. (Only height)
     border: 4px solid var(--yellow);
   }
 
-/* -------- index__info end --------- */
+  .leaderboard{
+    background: var(--grey);
+    padding: 0;
+    text-align: center;
+  }
 
-
-
-
-
-
-/* ------- index__leaderboard ------------  */
-
-
-/*----Leaderboard styling---- */
+  
+ul {
+    list-style-type: none;
+}
 
 .index__leaderboard {
     background-color: var(--yellow);
@@ -276,74 +254,13 @@ td, th {
     text-align: left;
     padding: 8px;
 }
-
-tr:nth-child(even) {
-    background-color: var(--green);
-}
-
-/*----Leaderboard styling ends---- */
-
   #map{
      margin:100px;
      width:400px;
      height:400px;
   }
 
-tr:nth-child(even) {
-      background-color: var(--green);
-    }
-
-
-
-
-/* ------- index__leaderboard end ---------  */
-
-
-
-/*------------  index__map -------------- */
-
-.map {
-    height: 110vh;
-}
-
-<<<<<<< HEAD
-/*------------  index__map end -------------- */
-
-
-/* ------------ info-page-styling ------------ */
   
-#indexInfo {
-    background-color: var(--green);
-    height: 110vh;
-}
-
-.info-text {
-    margin-top: 3em;
-    padding: 0 2em;
-    line-height: 1.5em;
-}
-
-/* ------------ info-page-styling end ------------ */
-
-=======
->>>>>>> 9b94bcd3c4324b4a556e4b830c444c5ae14415b5
-
-
-
-
-
-
-
- /*--------  profile section  ------------- */
-
-  .progress {
-      background-color: #fff;
-  }
-
- /* -------- profile section ends ----------------- */
-
-
-
   /*---- Form validation---- */
 
   .red-shadow {
@@ -355,83 +272,4 @@ tr:nth-child(even) {
 
   /* ----Form validation ends--- */
 
-  @media only screen and (min-width: 756px) {
-    .index__header {
-        display: none;
-    }
-}
 
-
-  /* -------- index__group --------- */
-
-.index__group{
-	padding-right: 20px;
-	padding-left:  20px;
-}
-
-
-
-p{
-	border-radius: 5px;
-	padding-left: 15px;
-}
-
-
-
-.user{
-	padding-top: 1px;
-	padding-right: 1px;
-	padding-bottom: 1px;
-	padding-left: 1px;
-
-	border-radius: 5px
-}
-h2{
-	padding-top: 5px;
-	text-align: center;
-}
-
-
-/* -------- index__group end --------- */
-/* -------- Map timer start --------- */
-h1{
-  color: #396;
-  font-weight: 100;
-  font-size: 40px;
-  margin: 40px 0px 20px;
-}
-
-#clockdiv{
-	font-family: sans-serif;
-	font-weight: 100;
-	text-align: center;
-	font-size: 30px;
-  position: absolute;
-  left:44%;
-
-}
-
-#clockdiv > div{
-	padding: 10px;
-	border-radius: 3px;
-	background: #00BF96;
-	display: inline-block;
-}
-
-#clockdiv div > span{
-	padding: 15px;
-	border-radius: 3px;
-	background: #00816A;
-}
-
-.smalltext{
-	padding-top: 5px;
-	font-size: 16px;
-}
-@media only screen and (max-width: 376px) {
-    #clockdiv {
-      top: 1026px;
-      left: 95px;
-
-    }
-/* -------- Map timer end --------- */
