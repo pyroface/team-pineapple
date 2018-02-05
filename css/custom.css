@@ -260,6 +260,8 @@ Includes support for 25%, 50%, 75%, and 100% by default. (Only height)
 /* ------- index__leaderboard ------------  */
 
 
+/*----Leaderboard styling---- */
+
 .index__leaderboard {
     background-color: var(--yellow);
 }
@@ -274,6 +276,18 @@ td, th {
     text-align: left;
     padding: 8px;
 }
+
+tr:nth-child(even) {
+    background-color: var(--green);
+}
+
+/*----Leaderboard styling ends---- */
+
+  #map{
+     margin:100px;
+     width:400px;
+     height:400px;
+  }
 
 tr:nth-child(even) {
       background-color: var(--green);
@@ -292,10 +306,30 @@ tr:nth-child(even) {
     height: 110vh;
 }
 
+<<<<<<< HEAD
+/*------------  index__map end -------------- */
+
+
+/* ------------ info-page-styling ------------ */
+  
+#indexInfo {
+    background-color: var(--green);
+    height: 110vh;
+}
+
+.info-text {
+    margin-top: 3em;
+    padding: 0 2em;
+    line-height: 1.5em;
+}
+
+/* ------------ info-page-styling end ------------ */
+
+=======
+>>>>>>> 9b94bcd3c4324b4a556e4b830c444c5ae14415b5
 
 
 
-  /*------------  index__map end -------------- */
 
 
 
@@ -320,6 +354,12 @@ tr:nth-child(even) {
   }
 
   /* ----Form validation ends--- */
+
+  @media only screen and (min-width: 756px) {
+    .index__header {
+        display: none;
+    }
+}
 
 
   /* -------- index__group --------- */
@@ -395,3 +435,7 @@ h1{
 
     }
 /* -------- Map timer end --------- */
+
+#mySignUpModal {
+    z-index: 100;
+}
