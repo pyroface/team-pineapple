@@ -669,6 +669,7 @@ function showMap(lat, lon) {
       
         delete icon1.url;
         delete coin1.position;
+        alert("You have found a coin!");
       }
 
       // coin2
@@ -676,6 +677,7 @@ function showMap(lat, lon) {
       
         delete icon2.url;
         delete coin2.position;
+        alert("You have found a coin!");
       }
 
       // coin3
@@ -683,6 +685,7 @@ function showMap(lat, lon) {
       
         delete icon3.url;
         delete coin3.position;
+        alert("You have found a coin!");
       }
 
       // coin4
@@ -690,6 +693,7 @@ function showMap(lat, lon) {
       
         delete icon4.url;
         delete coin4.position;
+        alert("You have found a coin!");
       }
 
       // coin5
@@ -697,6 +701,7 @@ function showMap(lat, lon) {
       
         delete icon5.url;
         delete coin5.position;
+        alert("You have found a coin!");
       }
 }
 
