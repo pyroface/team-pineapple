@@ -114,59 +114,71 @@
 
          <!-- [ Modal #1 ] -->
          <div class="modal fade" id="signUpModal" tabindex="-1">
-          <div class="modal-dialog">
+            <div class="modal-dialog">
               <div class="modal-content">
-                  <button type="button" class="close" data-dismiss="modal"><i class="icon-xs-o-md"></i></button>
+                <button type="button" class="close" data-dismiss="modal"><i class="icon-xs-o-md"></i></button>
                   <div class="modal-header">
-                      <h4 class="modal-title caps"><strong>Create Account</strong></h4>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title caps"><strong>Create Account</strong></h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                   </div>
                   <div class="modal-body">
-                      <form>
-                          <div class="form-group">
-                              <label for="usr">Username:</label>
-                              <input type="text" class="form-control" id="usr" placeholder="Enter username..." required />
-                          </div>
-                          <div class="form-group">
-                              <label for="pwd">Password:</label>
-                              <input type="password" class="form-control" id="pwd" placeholder="Enter password..." required />
-                          </div>
-                          <div class="form-group">
-                              <label for="confirmpwd">Confirm Password:</label>
-                              <input type="password" class="form-control" id="confirmpwd" placeholder="Confirm password..." required />
-                          </div>
-                          <button type="submit" class="btn btn-primary">Create</button>
-                      </form>
-                  </div>
-              </div>
-          </div>
-      </div><!-- Modal #1 -->
+                    <form>
+                      <div class="form-group">
+                        <label for="usr">Username:</label>
+                        <input type="text" class="form-control" id="usr" placeholder="Enter username..." required />
+                      </div>
+                      <div class="form-group">
+                        <label for="pwd">Password:</label>
+                        <input type="password" class="form-control" id="pwd" placeholder="Enter password..." required />
+                      </div>
+                      <div class="form-group">
+                        <label for="confirmpwd">Confirm Password:</label>
+                        <input type="password" class="form-control" id="confirmpwd" placeholder="Confirm password..." required />
+                      </div>
 
-      <!-- [ Modal #2 ] -->
-      <div class="modal fade" id="signInModal" tabindex="-1">
-          <div class="modal-dialog">
-              <div class="modal-content">
+                      <div class="imageupload panel panel-default">
+                        <div class="panel-heading clearfix">
+                          <h3 class="panel-title pull-left">Upload Image</h3>
+                        </div>
+                        <div class="file-tab panel-body">
+                          <label class="btn btn-default btn-file">
+                          <!-- The file is stored here. -->
+                            <input type="file" name="image-file">
+                          </label>
+                        </div>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Create</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End of Modal #1 -->
+
+            <!-- [ Modal #2 ] -->
+            <div class="modal fade" id="signInModal" tabindex="-1">
+              <div class="modal-dialog">
+                <div class="modal-content">
                   <button type="button" class="close" data-dismiss="modal"><i class="icon-xs-o-md"></i></button>
                   <div class="modal-header">
-                      <h4 class="modal-title caps"><strong>Sign In</strong></h4>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title caps"><strong>Sign In</strong></h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                   </div>
                   <div class="modal-body">
-                      <form>
-                          <div class="form-group">
-                              <label for="usr">Username:</label>
-                              <input type="text" class="form-control" id="usr" placeholder="Enter username..." required />
-                          </div>
-                          <div class="form-group">
-                              <label for="pwd">Password:</label>
-                              <input type="password" class="form-control" id="pwd" placeholder="Enter password..." required />
-                          </div>
-                          <button type="submit" class="btn btn-primary">Sign In</button>                            
-                      </form>
+                    <form>
+                      <div class="form-group">
+                        <label for="usr">Username:</label>
+                        <input type="text" class="form-control" id="usr" placeholder="Enter username..." required />
+                      </div>
+                      <div class="form-group">
+                        <label for="pwd">Password:</label>
+                        <input type="password" class="form-control" id="pwd" placeholder="Enter password..." required />
+                      </div>
+                      <button type="submit" class="btn btn-primary">Sign In</button>                            
+                    </form>
                   </div>
+                </div>
               </div>
-          </div>
-      </div><!-- Modal #2 -->
+            </div><!-- Modal #2 -->
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
