@@ -74,7 +74,7 @@
 
 .bild {
     position: absolute;
-    top: 15%;
+    top: 10%;
     clip-path: inset(0px 0px 100px 0px);
 }
 
@@ -131,11 +131,6 @@
                         <label for="pwd">Password:</label>
                         <input type="password" class="form-control" id="pwd" placeholder="Enter password..." required />
                       </div>
-                      <div class="form-group">
-                        <label for="confirmpwd">Confirm Password:</label>
-                        <input type="password" class="form-control" id="confirmpwd" placeholder="Confirm password..." required />
-                      </div>
-
                       <div class="imageupload panel panel-default">
                         <label for="image">Profile Image</label>
                         <div class="input-group mb-3">
