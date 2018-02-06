@@ -151,6 +151,34 @@
               </div>
             </div><!-- End of Modal #1 -->
 
+
+            <?php
+        /* Attempt MySQL server connection. Assuming you are running MySQL
+        server with default setting (user 'root' with no password) */
+        $link = mysqli_connect("localhost", "root", "", "catchcoins");
+        
+        // Check connection
+        if($link === false){
+            die("ERROR: Could not connect. " . mysqli_connect_error());
+        }
+        
+        // Escape user inputs for security
+        $name = mysqli_real_escape_string($link, $_REQUEST['username']);
+        $password= mysqli_real_escape_string($link, $_REQUEST['password']);
+        $image = mysqli_real_escape_string($link, $_REQUEST['image']);
+        
+        // attempt insert query execution
+        $sql = "INSERT INTO accounts (Username, Password, Image) VALUES ('$name', '$password', '$image')";
+        if(mysqli_query($link, $sql)){
+            echo "Records added successfully.";
+        } else{
+            echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+        }
+        
+        // close connection
+        mysqli_close($link);
+        ?>
+
             <!-- [ Modal #2 ] -->
             <div class="modal fade" id="signInModal" tabindex="-1">
               <div class="modal-dialog">
