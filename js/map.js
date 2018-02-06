@@ -12,7 +12,6 @@ window.onload = function () {
                 enableHighAccuracy: true,
                 maximumAge: Infinity
             } 
-
             // Show the map
             showMap(lat, lon);
         });
@@ -20,9 +19,6 @@ window.onload = function () {
         // Print out a message to the user.
         document.write('Your browser does not support GeoLocation :(');
     }
-
-
-
 }
 
 // Show the user's position on a Google map.
@@ -333,7 +329,7 @@ function showMap(lat, lon) {
   var map = new google.maps.Map(document.querySelector('.map'), mapOptions);
 
   var cluster = {
-    url: "../img/m3.png", // url
+    url: "../img/playerMarker.png", // url
     scaledSize: new google.maps.Size(50, 50), // scaled size
     origin: new google.maps.Point(0, 0), // origin
     anchor: new google.maps.Point(0, 0) // anchor
@@ -412,9 +408,6 @@ function showMap(lat, lon) {
         anchor: new google.maps.Point(0, 0) // anchor
       };
 
-   
-  
-  
       var coin1 = new google.maps.Marker({
          position: 
          { lat: 59.313453, 
@@ -513,7 +506,7 @@ function showMap(lat, lon) {
       //  Player 1
       var player1 = {
         url: "../img/red_MarkerB.png", // url
-        scaledSize: new google.maps.Size(35, 35), // scaled size
+        scaledSize: new google.maps.Size(20, 35), // scaled size
         origin: new google.maps.Point(0, 0), // origin
         anchor: new google.maps.Point(0, 0) // anchor
       };
@@ -554,7 +547,7 @@ function showMap(lat, lon) {
       //  Player 2
       var player2 = {
         url: "../img/blue_MarkerB.png", // url
-        scaledSize: new google.maps.Size(35, 35), // scaled size
+        scaledSize: new google.maps.Size(20, 35), // scaled size
         origin: new google.maps.Point(0, 0), // origin
         anchor: new google.maps.Point(0, 0) // anchor
       };
@@ -595,7 +588,7 @@ function showMap(lat, lon) {
       //  Player 3
       var player3 = {
         url: "../img/yellow_MarkerA.png", // url
-        scaledSize: new google.maps.Size(30, 30), // scaled size
+        scaledSize: new google.maps.Size(20, 35), // scaled size
         origin: new google.maps.Point(0, 0), // origin
         anchor: new google.maps.Point(0, 0) // anchor
       };
