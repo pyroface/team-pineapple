@@ -125,17 +125,17 @@
                     <form>
                       <div class="form-group">
                         <label for="usr">Username:</label>
-                        <input type="text" class="form-control" id="usr" placeholder="Enter username..." required />
+                        <input type="text" name="username" class="form-control" id="usr" placeholder="Enter username..." required />
                       </div>
                       <div class="form-group">
                         <label for="pwd">Password:</label>
-                        <input type="password" class="form-control" id="pwd" placeholder="Enter password..." required />
+                        <input type="password" name="password" class="form-control" id="pwd" placeholder="Enter password..." required />
                       </div>
                       <div class="imageupload panel panel-default">
                         <label for="image">Profile Image</label>
                         <div class="input-group mb-3">
                             <div class="custom-file">
-                              <input type="file" class="custom-file-input" id="inputGroupFile02">
+                              <input type="file" name="image" class="custom-file-input" id="inputGroupFile02">
                               <label class="custom-file-label" for="inputGroupFile02">Upload image</label>
                             </div>
                           </div>
