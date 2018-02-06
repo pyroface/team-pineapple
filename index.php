@@ -198,7 +198,7 @@
                         <label for="pwd">Password:</label>
                         <input type="password" class="form-control" id="pwd" placeholder="Enter password..." required />
                       </div>
-                      <button type="submit" class="btn btn-primary">Sign In</button>                            
+                      <button type="submit" name="save" class="btn btn-primary">Sign In</button>                            
                     </form>
                   </div>
                 </div>
