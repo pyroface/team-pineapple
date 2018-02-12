@@ -11,87 +11,57 @@
     <link href="../css/offcanvas.css" rel="stylesheet">
     <link href="../css/hamburgers.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/game.css">
-    <style>
-      @import url('https://fonts.googleapis.com/css?family=Varela+Round');
-      a {
-        font-family: 'Varela Round', sans-serif;
-        font-size: 40px;
-      }
-      .bg-own {
-        background: #8e44ad !important; 
-      }
-  
-      .navbar-brand {
-      display: inline-block;
-      padding-top: 0rem;
-      padding-bottom: 0rem;
-      margin-right: 1rem;
-      font-size: 1.25rem;
-      line-height: inherit;
-      white-space: nowrap;
-      }
-      
-      .navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
-      color: #ffc107!important;
-      }
-  
-  
-
-    </style>
 
     <title>off-canvas</title>
   </head>
-        <body class="bg-light">
-          <nav class="navbar fixed-top navbar-dark bg-dark bg-own ">
-            <a class="navbar-brand" href="#">
-            <img src="../img/logo.png" width="40" height="40" alt="">
-          </a>
-            <button class="hamburger hamburger--slider navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
-              <span class="hamburger-box">
-              <span class="hamburger-inner navbar-toggler-icon"></span>
-              </span>
-            </button>
-      
-            <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
-              <ul class="navbar-nav mr-auto mt-5 text-center">
-                <li class="nav-item">
-                  <a class="nav-link" href="profile.php">Profile <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="game.php">Game</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Team-admin/Leaderboard</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../index.php">Logout</a>
-                </li>
-              </ul>
-            </div>
-          </nav>
-
-
-        <!-- index__map start -->
-
-        <section class="index__map col-12 p-2 map">
-            <!--<script src="../js/app_js.js">
-            </script> -->
-            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2zN8wobSAuw_ejpGz9ll31ZMQL-iV7JE&libraries=geometry" type="text/javascript"></script>
-          </section>
-          <div id="clockdiv">
-           <div>
-             <span class="minutes"></span>
-             <div class="smalltext">Minutes</div>
-           </div>
-           <div>
-             <span class="seconds"></span>
-             <div class="smalltext">Seconds</div>
-           </div>
-           <script src="../js/app_js.js">
-             </script>
-         </div>
   
-          <!-- index__map ends -->
+  <body class="bg-light">
+    <nav class="navbar fixed-top navbar-dark bg-dark bg-own ">
+      <a class="navbar-brand" href="#">
+        <img src="../img/logo.png" width="40" height="40" alt="">
+      </a>
+      <button class="hamburger hamburger--slider navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+        <span class="hamburger-box">
+        <span class="hamburger-inner navbar-toggler-icon"></span>
+        </span>
+      </button>
+      
+      <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto mt-5 text-center">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Profile <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="game.html">Game</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Team-admin/Leaderboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+    <!-- index__map start -->
+    <section class="index__map col-12 p-2 map">
+      <script src="../js/map.js"></script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2zN8wobSAuw_ejpGz9ll31ZMQL-iV7JE" type="text/javascript"></script>
+    </section>
+    <div id="clockdiv">
+      <div>
+        <span class="minutes"></span>
+        <div class="smalltext">Minutes</div>
+      </div>
+      <div>
+        <span class="seconds"></span>
+        <div class="smalltext">Seconds</div>
+      </div>
+      <script src="../js/map.js"></script>
+    </div>
+    <!-- index__map ends -->
   
   
             
