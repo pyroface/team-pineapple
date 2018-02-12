@@ -1,3 +1,34 @@
+<?php            $conn = mysqli_connect("localhost", "root", "", "catchcoins");
+            //echo ("yo!!!!");
+            if(isset($_POST['loginButton'])) {
+                // username and password sent from form 
+                
+                $myusername = mysqli_real_escape_string($conn, $_REQUEST['usr']);
+                $mypassword = mysqli_real_escape_string($conn, $_REQUEST['pwd']); 
+                //echo ("<div id='yo'>" + $myusername + $mypassword +"</div>");
+                $sql = "SELECT * FROM accounts WHERE Username = '$myusername' AND Password = '$mypassword'";
+                $mysqli_result = mysqli_query($conn,$sql);
+                $row = mysqli_fetch_array($mysqli_result,MYSQLI_ASSOC);
+           
+                $count = mysqli_num_rows($mysqli_result);
+           
+                // If result matched $myusername and $mypassword, table row must be 1 row
+             
+                if($count == 1) {
+                 
+                    $_SESSION['usr'] = $myusername;
+              
+                    header("location: Loggedin/game.php?currentUser=");
+                }
+                else {
+                    $error = "Your Login Name or Password is invalid";
+                }
+                  
+            }
+            // close connection
+            mysqli_close($conn);
+        
+        ?>
 
 <!doctype html>
 <html lang="en">
@@ -179,10 +210,8 @@
 
         }   
         // close connection
-        mysqli_close($conn);
-        ?>
-
-        <?php
+        // mysqli_close($conn);
+        
 
             $server = "localhost";
             $username = "root";
@@ -190,36 +219,8 @@
             $dbname = "catchcoins";
         
             // Create connection
-            $conn = new mysqli($server, $username, $password, $dbname);
+            //$conn = new mysqli($server, $username, $password, $dbname);
 
-            if(isset($_POST['loginButton'])) {
-                // username and password sent from form 
-           
-                $myusername = mysqli_real_escape_string($conn,$_POST['usr']);
-                $mypassword = mysqli_real_escape_string($conn,$_POST['pwd']); 
-           
-                $sql = "SELECT * FROM accounts WHERE Username = '$myusername' and Password = '$mypassword'";
-                $mysqli_result = mysqli_query($conn,$sql);
-                $row = mysqli_fetch_array($mysqli_result,MYSQLI_ASSOC);
-           
-                $count = mysqli_num_rows($mysqli_result);
-           
-                // If result matched $myusername and $mypassword, table row must be 1 row
-             
-                if($count == 1) {
-                 
-                    $_SESSION['usr'] = $myusername;
-              
-                    header("location: Loggedin/game.php");
-                }
-                else {
-                    $error = "Your Login Name or Password is invalid";
-                }
-                  
-            }
-            // close connection
-            mysqli_close($conn);
-        
         ?>
 
         
@@ -234,7 +235,7 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                   </div>
                   <div class="modal-body">
-                    <form action="" method="post">
+                    <form method="post">
                       <div class="form-group">
                         <label for="usr">Username:</label>
                         <input type="text" name="usr" class="form-control" id="usr" placeholder="Enter username..." required />
