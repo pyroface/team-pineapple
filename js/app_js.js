@@ -8,11 +8,11 @@ var updatePos =    {
 
 var players = new Array(); // todo players
 var coins = new Array();
-
+/*
 coins[0] = {lat: 59.313453, lng: 18.110636, value: 100};
 coins[1] = {lat: 59.311710, lng: 18.110991, value: 200};
 coins[2] = {lat: 59.311973, lng: 18.104467, value: 300};
-
+*/
 var cluster = {
     url: "../img/coints.png", // url
     scaledSize: new google.maps.Size(50, 50), // scaled size
@@ -26,7 +26,15 @@ var coinMarkers = new Array();
 
 
 function startMap () {
-    var myPos = navigator.geolocation.getCurrentPosition(initMap);
+    const url = 'http://localhost:3000/api/coins'
+
+    fetch(url).then(function(res) {
+    return res.json();
+    }).then(function(data){
+        coins = data.coins;
+        var myPos = navigator.geolocation.getCurrentPosition(initMap);
+    });
+    
     
 }
 
@@ -372,6 +380,8 @@ function runGame(pos) {
             coinMarkers[i].setMap(null);
             console.log("Player got " + coinMarkers[i].my_value + " more coins!");
             console.log("Player is near " + coinMarkers[i].title);
+            // TODO POST via Fetch() till API:et
+            
         }
     
     }
