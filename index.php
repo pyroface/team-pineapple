@@ -122,7 +122,7 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                   </div>
                   <div class="modal-body">
-                    <form>
+                    <form method="post">
                       <div class="form-group">
                         <label for="usr">Username:</label>
                         <input type="text" name="username" class="form-control" id="usr" placeholder="Enter username..." required />
@@ -144,7 +144,7 @@
                           </label>
                         </div>
                       </div>
-                      <button type="submit" class="btn btn-primary">Create</button>
+                      <button type="submit" name="create" class="btn btn-primary">Create</button>
                     </form>
                   </div>
                 </div>
@@ -153,30 +153,33 @@
 
 
             <?php
-        /* Attempt MySQL server connection. Assuming you are running MySQL
-        server with default setting (user 'root' with no password) */
-        $link = mysqli_connect("localhost", "root", "", "catchcoins");
-        
-        // Check connection
-        if($link === false){
-            die("ERROR: Could not connect. " . mysqli_connect_error());
+        // SIGN IN PHP CODE
+        if(isset($_POST['create'])) {
+            /* Attempt MySQL server connection. Assuming you are running MySQL
+            server with default setting (user 'root' with no password) */
+            $link = mysqli_connect("localhost", "root", "", "catchcoins");
+            
+            // Check connection
+            if($link === false){
+                die("ERROR: Could not connect. " . mysqli_connect_error());
+            }
+            
+            // Escape user inputs for security
+            $name = mysqli_real_escape_string($link, $_REQUEST['username']);
+            $password= mysqli_real_escape_string($link, $_REQUEST['password']);
+            $image = mysqli_real_escape_string($link, $_REQUEST['image']);
+            
+            // attempt insert query execution
+            $sql = "INSERT INTO accounts (Username, Password, Image) VALUES ('$name', '$password', '$image')";
+            if(mysqli_query($link, $sql)){
+                echo "Records added successfully.";
+            } else{
+                echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+            }
         }
-        
-        // Escape user inputs for security
-        $name = mysqli_real_escape_string($link, $_REQUEST['username']);
-        $password= mysqli_real_escape_string($link, $_REQUEST['password']);
-        $image = mysqli_real_escape_string($link, $_REQUEST['image']);
-        
-        // attempt insert query execution
-        $sql = "INSERT INTO accounts (Username, Password, Image) VALUES ('$name', '$password', '$image')";
-        if(mysqli_query($link, $sql)){
-            echo "Records added successfully.";
-        } else{
-            echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
-        }
-        
         // close connection
         mysqli_close($link);
+        
         ?>
 
             <!-- [ Modal #2 ] -->
@@ -204,6 +207,7 @@
                 </div>
               </div>
             </div><!-- Modal #2 -->
+
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
