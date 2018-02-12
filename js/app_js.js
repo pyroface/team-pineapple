@@ -8,6 +8,10 @@ var updatePos =    {
 
 var players = new Array(); // todo players
 var coins = new Array();
+
+var currentUser;
+
+
 /*
 coins[0] = {lat: 59.313453, lng: 18.110636, value: 100};
 coins[1] = {lat: 59.311710, lng: 18.110991, value: 200};
@@ -26,6 +30,9 @@ var coinMarkers = new Array();
 
 
 function startMap () {
+    let params = (new URL(location)).searchParams;
+    currentUser = params.get('currentUser'); // 
+    console.log(currentUser); // currentUser ska vara userID i backend
     const url = 'http://localhost:3000/api/coins'
 
     fetch(url).then(function(res) {
@@ -381,7 +388,7 @@ function runGame(pos) {
             console.log("Player got " + coinMarkers[i].my_value + " more coins!");
             console.log("Player is near " + coinMarkers[i].title);
             // TODO POST via Fetch() till API:et
-            
+
         }
     
     }
