@@ -1,50 +1,75 @@
 /*------------  index__map -------------- */
 
 .map {
-    height: 110vh;
+  height: 110vh;
 }
 
 
 /* -------- Map timer start --------- */
 h1{
-    color: #396;
-    font-weight: 100;
-    font-size: 40px;
-    margin: 40px 0px 20px;
+  color: #396;
+  font-weight: 100;
+  font-size: 40px;
+  margin: 40px 0px 20px;
   }
 
-  #clockdiv{
-      font-family: sans-serif;
-      font-weight: 100;
-      text-align: center;
-      font-size: 30px;
-    position: absolute;
-    left:44%;
-    top: 9%;
-
+#clockdiv{
+  font-family: sans-serif;
+  font-weight: 100;
+  text-align: center;
+  font-size: 30px;
+  position: absolute;
+  left:44%;
+  top: 9%;
   }
 
-  #clockdiv > div{
-      padding: 10px;
-      border-radius: 3px;
-      background: #00BF96;
-      display: inline-block;
+#clockdiv > div{
+  padding: 10px;
+  border-radius: 3px;
+  background: #00BF96;
+  display: inline-block;
   }
 
-  #clockdiv div > span{
-      padding: 15px;
-      border-radius: 3px;
-      background: #00816A;
+#clockdiv div > span{
+  padding: 15px;
+  border-radius: 3px;
+  background: #00816A;
   }
 
-  .smalltext{
-      padding-top: 5px;
-      font-size: 16px;
+.smalltext{
+  padding-top: 5px;
+  font-size: 16px;
   }
-  @media only screen and (max-width: 376px) {
-      #clockdiv {
-        top: 58px;
-        left: 95px;
-
+  
+@media only screen and (max-width: 376px) {
+  #clockdiv {
+    top: 58px;
+    left: 95px;
       }
   /* -------- Map timer end --------- */
+
+
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+
+a {
+  font-family: 'Varela Round', sans-serif;
+  font-size: 40px;
+  }
+
+.bg-own {
+  background: #8e44ad !important; 
+  }
+  
+.navbar-brand {
+  display: inline-block;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  line-height: inherit;
+  white-space: nowrap;
+  }
+      
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
+  color: #ffc107!important;
+  }
