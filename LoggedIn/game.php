@@ -78,7 +78,7 @@
             </script> -->
             <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2zN8wobSAuw_ejpGz9ll31ZMQL-iV7JE&libraries=geometry" type="text/javascript"></script>
           </section>
-          <div id="clockdiv">
+<!--           <div id="clockdiv">
            <div>
              <span class="minutes"></span>
              <div class="smalltext">Minutes</div>
@@ -86,7 +86,7 @@
            <div>
              <span class="seconds"></span>
              <div class="smalltext">Seconds</div>
-           </div>
+           </div> -->
            <script src="../js/app_js.js">
              </script>
          </div>

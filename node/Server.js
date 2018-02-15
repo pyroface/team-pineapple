@@ -5,6 +5,15 @@ var md5 = require('MD5');
 var rest = require("./REST.js");
 var app  = express();
 
+
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+    next();
+   });
+
 function REST(){
     var self = this;
     self.connectMysql();

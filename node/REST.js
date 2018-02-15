@@ -33,6 +33,20 @@ REST_ROUTER.prototype.handleRoutes= function(router,connection,md5) {
         });
     });
 
+    // Get one id from accounts, ID 
+    router.get("/users/:user_id",function(req,res){
+        var query = "SELECT * FROM ?? WHERE ??=?";
+        var table = ["accounts","ID",req.params.user_id];
+        query = mysql.format(query,table);
+        connection.query(query,function(err,rows){
+            if(err) {
+                res.json({"Error" : true, "Message" : "Error executing MySQL query"});
+            } else {
+                res.json({"Error" : false, "Message" : "Success", "Users" : rows});
+            }
+        });
+    });
+
 
 
 }

@@ -30,9 +30,6 @@ var coinMarkers = new Array();
 
 
 function startMap () {
-    let params = (new URL(location)).searchParams;
-    currentUser = params.get('currentUser'); // 
-    console.log(currentUser); // currentUser ska vara userID i backend
     const url = 'http://localhost:3000/api/coins'
 
     fetch(url).then(function(res) {
@@ -44,6 +41,33 @@ function startMap () {
     
     
 }
+
+
+function user() {
+    let params = (new URL(location)).searchParams;
+    currentUser = params.get('currentUser'); // 
+    console.log(currentUser); // currentUser ska vara userID i backend
+
+
+    const urlUser = 'http://localhost:3000/api/users/' + currentUser; 
+    fetch(urlUser)
+        .then(function (response) {
+            if (response.ok) {
+                response.json()
+                    .then(function (json) {
+                        const Userid= json.Users;
+
+                        Userid.forEach((player) => {
+                            var firstPlayer= {PlayerID: player.ID, PlayerName: player.Username };
+                            console.log(firstPlayer);
+                        });
+                    });
+            } else {
+                console.log('Network request for products.json failed with response ');
+            }
+       });
+}
+user();
 
 function initMap (myPos) {
     console.log(myPos);

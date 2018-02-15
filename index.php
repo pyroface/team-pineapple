@@ -7,18 +7,21 @@
                 $mypassword = mysqli_real_escape_string($conn, $_REQUEST['pwd']); 
                 //echo ("<div id='yo'>" + $myusername + $mypassword +"</div>");
                 $sql = "SELECT * FROM accounts WHERE Username = '$myusername' AND Password = '$mypassword'";
-                $mysqli_result = mysqli_query($conn,$sql);
-                $row = mysqli_fetch_array($mysqli_result,MYSQLI_ASSOC);
+                
+                $result = $conn->query($sql);
+
+                //$mysqli_result = mysqli_query($conn,$sql);
+                //$row = mysqli_fetch_array($mysqli_result,MYSQLI_ASSOC);
            
-                $count = mysqli_num_rows($mysqli_result);
+                //$count = mysqli_num_rows($mysqli_result);
            
                 // If result matched $myusername and $mypassword, table row must be 1 row
              
-                if($count == 1) {
+                if($result->num_rows === 1) {
                  
                     $_SESSION['usr'] = $myusername;
-              
-                    header("location: Loggedin/game.php?currentUser=");
+                    $ID = $result->fetch_assoc()['ID'];
+                    header("location: Loggedin/game.php?currentUser=$ID");
                 }
                 else {
                     $error = "Your Login Name or Password is invalid";
@@ -238,11 +241,11 @@
                     <form method="post">
                       <div class="form-group">
                         <label for="usr">Username:</label>
-                        <input type="text" name="usr" class="form-control" id="usr" placeholder="Enter username..." required />
+                        <input type="text" name="usr" class="form-control"  placeholder="Enter username..." required />
                       </div>
                       <div class="form-group">
                         <label for="pwd">Password:</label>
-                        <input type="password" name="pwd" class="form-control" id="pwd" placeholder="Enter password..." required />
+                        <input type="password" name="pwd" class="form-control" placeholder="Enter password..." required />
                       </div>
                       <button type="submit" name="loginButton" class="btn btn-primary">Sign In</button>                            
                     </form>
