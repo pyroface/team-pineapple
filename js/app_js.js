@@ -58,7 +58,7 @@ function user() {
                         const Userid= json.Users;
 
                         Userid.forEach((player) => {
-                            var firstPlayer= {PlayerID: player.ID, PlayerName: player.Username };
+                            var firstPlayer= {PlayerID: player.ID, PlayerName: player.Username, PlayerScore: player.Score };
                             console.log(firstPlayer);
                         });
                     });
