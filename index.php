@@ -52,7 +52,7 @@
         <link rel="apple-touch-icon" href="img/logo.png" sizes="180x180">
         <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
 
-        <title>Hello, world!</title>
+        <title>Catchcoins💰</title>
         <style>
             /* ---------- landing-page-styling ---------- */
 
