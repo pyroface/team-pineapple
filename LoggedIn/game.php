@@ -39,7 +39,7 @@
 
     </style>
 
-    <title>off-canvas</title>
+    <title>Catchcoins</title>
   </head>
         <body class="bg-light">
           <nav class="navbar fixed-top navbar-dark bg-dark bg-own ">
