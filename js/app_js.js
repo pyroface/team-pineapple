@@ -10,7 +10,9 @@ var players = new Array(); // todo players
 var coins = new Array();
 
 var currentUser;
+var firstPlayer;
 
+const api_url = 'http://localhost:3000/api/'
 
 /*
 coins[0] = {lat: 59.313453, lng: 18.110636, value: 100};
@@ -30,8 +32,8 @@ var coinMarkers = new Array();
 
 
 function startMap () {
-    const url = 'http://localhost:3000/api/coins'
-
+    
+        const url = api_url + "coins"
     fetch(url).then(function(res) {
     return res.json();
     }).then(function(data){
@@ -58,7 +60,7 @@ function user() {
                         const Userid= json.Users;
 
                         Userid.forEach((player) => {
-                            var firstPlayer= {PlayerID: player.ID, PlayerName: player.Username, PlayerScore: player.Score };
+                            firstPlayer= {PlayerID: player.ID, PlayerName: player.Username, PlayerScore: player.Score };
                             console.log(firstPlayer);
                         });
                     });
@@ -408,8 +410,26 @@ function runGame(pos) {
         //console.log("i: " + i + "close: " + close);
         if (close <= dist) {
             // player is near coin!
+  
             coinMarkers[i].setMap(null);
-            console.log("Player got " + coinMarkers[i].my_value + " more coins!");
+            console.log("Player " + firstPlayer + "got " + coinMarkers[i].my_value + " more coins!");
+            var data = {value: coinMarkers[i].my_value, playerid: firstPlayer.PlayerID};
+            console.log(data);
+            
+            var request = new Request(api_url + "users", {
+                
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                    },
+                body: JSON.stringify(data)
+           
+            });
+            fetch(request).then(function(res) { 
+                console.log(res.body);
+                /* handle response */ 
+            });
+
             console.log("Player is near " + coinMarkers[i].title);
             // TODO POST via Fetch() till API:et
 

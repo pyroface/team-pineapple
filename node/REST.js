@@ -46,7 +46,20 @@ REST_ROUTER.prototype.handleRoutes= function(router,connection,md5) {
             }
         });
     });
-
+    router.put("/users",function(req,res){
+        console.log(req.body);
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        var query = "UPDATE ?? SET ?? = ?? + ? WHERE ?? = ?";
+        var table = ["accounts","Score","Score", req.body.value,"ID",req.body.playerid];
+        query = mysql.format(query,table);
+        connection.query(query,function(err,rows){
+            if(err) {
+                res.json({"Error" : true, "Message" : "Error executing MySQL query"});
+            } else {
+                res.json({"Error" : false, "Message" : "Updated the password for email "+req.body.email});
+            }
+        });
+    });
 
 
 }
