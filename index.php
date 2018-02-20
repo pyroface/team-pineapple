@@ -284,7 +284,7 @@ MODAL STYLING
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                   </div>
                   <div class="modal-body">
-                    <form method="post">
+                    <form autocomplete="off" method="post">
                       <div class="form-group">
                         <label for="usr">Username:</label>
                         <input type="text" name="username" id="usr" placeholder="Enter username..." required />
@@ -397,7 +397,7 @@ MODAL STYLING
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                   </div>
                   <div class="modal-body">
-                    <form method="post">
+                    <form autocomplete="off" method="post">
                       <div class="form-group">
                         <label for="usr">Username:</label>
                         <input type="text" name="usr"  placeholder="Enter username..." required />
