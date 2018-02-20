@@ -39,7 +39,9 @@
         background-color: gray;
       }
 
-
+      .game-green {
+        background: #1abc9c !important;
+      }
 
     </style>
 
@@ -76,8 +78,8 @@
 
 
 
-          <section class="index__profile black-background vh-100 pt-5">
-                <img src="../img/trophy.png" alt="game-avatar" class=" rounded mx-auto d-block h-25  black-background" >
+          <section class="index__profile vh-100 pt-5 game-green">
+                <img src="../img/trophy.png" alt="game-avatar" class=" rounded mx-auto d-block h-25  game-green" >
                 <h1 class="text-light text-center">Leaderboard</h1>
 
               <!--  
