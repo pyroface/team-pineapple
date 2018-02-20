@@ -18,9 +18,9 @@
         font-size: 40px;
       }
       .bg-own {
-        background: #8e44ad !important; 
+        background: #8e44ad !important;
       }
-  
+
       .navbar-brand {
       display: inline-block;
       padding-top: 0rem;
@@ -30,12 +30,12 @@
       line-height: inherit;
       white-space: nowrap;
       }
-      
+
       .navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
       color: #ffc107!important;
       }
-  
-  
+
+
 
     </style>
 
@@ -51,7 +51,7 @@
               <span class="hamburger-inner navbar-toggler-icon"></span>
               </span>
             </button>
-      
+
             <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
               <ul class="navbar-nav mr-auto mt-5 text-center">
                 <li class="nav-item">
@@ -70,99 +70,41 @@
             </div>
           </nav>
 
-          
-        
+
+
           <section class="index__profile black-background">
                 <img src="../img/avatar.jpg" alt="game-avatar" class="img-thumbnail rounded mx-auto d-block h-25  rounded-circle">
                 <h1 class="text-light text-center">Joe Doe</h1>
-      
-      
-                    <!-- Trophy-bar -->
-            <div class="container">
-                <div class="row mt-5 align-middle">
-      
-                  <div class="pl-2">
-                    <a class="mr-2 d-inline" href="#">
-                      <img src="../img/trophy.png" width="40" height="40" class="" alt="">
-                    </a>
-                  </div>
-      
-                  <div class="progress w-75 mt-2" style="height: 20px;">
-                    <div class="progress-bar d-inline   bg-secondary mw-100" role="progressbar  " style="width: 75%;" aria-valuenow="75" aria-valuemin="0"
-                      aria-valuemax="100">75%</div>
-                  </div>
-      
-                </div>
-      
-                <!-- Trophy bar ends -->
-      
-      
-                <!-- Task-bar done -->
-      
-      
-                <div class="row mt-5">
-      
-                <div class="pl-2">
-                  <a class="mr-2 d-inline" href="#">
-                    <img src="../img/done.svg" width="40" height="40" class="" alt="">
-                  </a>
-                </div>
-      
-                <div class="w-75 mt-1 ml-1 rounded" style="background: #06ef69e0;">
-                  <h5 class="p-0 mt-0 mb-0 text-nowrap">GO TO KUNGSHALLEN!</h5>
-                </div>
-      
-              </div>
-      
-              <!-- Task-bar done ends -->
-      
-      
-                 <!-- Task-bar done -->
-      
-      
-                <div class="row mt-5">
-      
-                  <div class="pl-2">
-                    <a class="mr-2 d-inline" href="#">
-                      <img src="../img/done.svg" width="40" height="40" class="" alt="">
-                    </a>
-                  </div>
-      
-                  <div class="w-75 mt-1 ml-1 rounded" style="background: #06ef69e0;">
-                    <h5 class="p-0 mt-0 mb-0 text-nowrap">FIND A TREASURE CHEST!</h5>
-                  </div>
-      
-                </div>
-      
-                <!-- Task-bar done ends -->
-      
-      
-                  <!-- Task-bar undone -->
-      
-      
-                  <div class="row mt-5">
-      
-                    <div class="pl-2">
-                      <a class="mr-2 d-inline" href="#">
-                        <img src="../img/undone.svg" width="40" height="40" class="" alt="">
-                      </a>
-                    </div>
-      
-                    <div class="w-75 mt-1 ml-1 rounded" style="background: #06ef69e0;">
-                      <h5 class="p-0 mt-0 mb-0 text-nowrap" style="color: #637486">FIND THREE COINTS!</h5>
-                    </div>
-      
-                  </div>
-      
-                  <!-- Task-bar undone ends -->
-            </div>
-                  
-      
-      
-      
-              </section>
-      
-            
+
+
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Username</th>
+    <th scope="col">Score</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <th scope="row">1</th>
+    <td>Carl</td>
+    <td>?</td>
+  </tr>
+  <tr>
+    <th scope="row">2</th>
+    <td>Guled</td>
+    <td>?</td>
+  </tr>
+  <tr>
+    <th scope="row">3</th>
+    <td>Anna</td>
+    <td>?</td>
+  </tr>
+</tbody>
+</table>
+
+    </section>
+
 
 
     <!-- Optional JavaScript -->
