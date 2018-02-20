@@ -75,9 +75,11 @@
           <section class="index__profile black-background vh-100 pt-5">
                 <img src="../img/avatar.jpg" alt="game-avatar" class="img-thumbnail rounded mx-auto d-block h-25  rounded-circle" >
                 <h1 class="text-light text-center">Joe Doe</h1>
+
+              <!--  <div class ="container">
                 <table class="table table-hover table-dark">
 
-  <thead>
+<thead>
   <tr>
     <th scope="col">#</th>
     <th scope="col">Username</th>
@@ -101,8 +103,39 @@
     <td>?</td>
   </tr>
 </tbody>
+</table>-->
+<div class = "container">
+<table class="table bg-white w-75 mt-5 mx-auto">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Rank</th>
+      <th scope="col">Username</th>
+      <th scope="col">Score</th>      
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="bg-warning">
+      <th scope="row">1</th>
+      <td>Carl</td>
+      <td>200</td>
+      
+    </tr>
+    <tr>
+      <th scop="row">2</th>
+      <td>Guled</td>
+      <td>400</td>
+      
+    </tr>
+    <tr class="bg-warning">
+      <th scope="row">3</th>
+      <td>Anna</td>
+      <td>100</td>
+      
+    </tr>
+  </tbody>
 </table>
 
+</div>
     </section>
 
 
