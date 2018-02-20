@@ -35,6 +35,132 @@
       color: #ffc107!important;
       }
   
+      * {
+    font-family: 'Chela One', cursive;
+    color: white;
+    letter-spacing: 2px;
+}
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.container h1 {
+    font-size: 90px;
+    color: white;
+    text-shadow: 2px 2px darkgrey;
+    margin-left: -20px;
+}
+
+#background {
+    background: url(../pictures/cityPicture1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 1;
+}
+.dev-footer {
+    margin: -80px 0 0 0;
+    height: 80px;
+    text-align: center;
+    padding: 10px 0 0 0px;
+    width: 100%;
+}
+.dev-footer p {
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 2px 2px darkgrey;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* BOOTSTRAP BUTTON STYLING */
+/* .btn {
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #ffc01f;
+} */
+
+
+/* ==================================================================================
+MODAL STYLING
+================================================================================== */
+
+
+.modal-dialog .modal-content {
+    text-align: center;
+    background-color: #9b59b6; 
+    border: 2px solid;
+    border-radius: .8em;
+    text-transform: uppercase;
+    text-shadow: 2px 2px #9b59b6;
+}
+
+.modal-dialog .modal-header {
+    justify-content: center;
+    border-bottom: 2px solid #9b59b6;
+    text-transform: uppercase;
+    text-shadow: 2px 2px #9b59b6;
+}
+
+.modal-body {
+    display: flex;
+    justify-content: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px #9b59b6;
+}
+
+.modal-body h2 {
+    font-size: 50px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px #9b59b6;
+}
+
+.modal-body h3 {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    text-shadow: 2px 2px #9b59b6;
+}
+
+.modal-body input{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border: 2px solid;
+    border-radius: .8em;
+    background: #27ae60;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* .modal-body button {
+    background:#9b59b6;
+    border: 2px solid;
+    border-radius: 0.8em;
+    text-transform: uppercase;
+} */
+
+*:focus {
+    outline: none !important;
+}
+*:active {
+    outline: none !important;
+}
+
+.text-black {
+    color: #212529;
+}
+.normal {
+    letter-spacing: normal;
+    word-wrap: normal;
+}
+
   
 
     </style>
@@ -73,6 +199,24 @@
         <section class="index__map col-12 p-2 map">
             <!--<script src="../js/app_js.js">
             </script> -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title mx-auto pl-5 text-black" id="exampleModalLabel">Information</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                      <img src="../img/pwa.gif" alt="">
+                      <p class="normal">
+                        To gain the best experinece of the game save it to your home screen!!!  
+                      </p>
+                  </div>
+                </div>
+              </div>
+            </div>
             <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2zN8wobSAuw_ejpGz9ll31ZMQL-iV7JE&libraries=geometry" type="text/javascript"></script>
           </section>
 <!--           <div id="clockdiv">
@@ -100,5 +244,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="../js/offcanvas.js"></script>
+    <script>
+    $('#exampleModal').modal('show')
+    </script>
   </body>
 </html>

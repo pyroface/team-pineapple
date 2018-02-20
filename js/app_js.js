@@ -448,11 +448,22 @@ function runMap (MapCenter) {
 
     playerMarker = new google.maps.Marker({
     position: MapCenter,
+    draggable: true,
+    animation: google.maps.Animation.DROP,
     map: map,
     title: 'Player 1'
     });
+    playerMarker.addListener('click', toggleBounce);
     coinMarker();
     navigator.geolocation.watchPosition(runGame, error, updatePos);
+
+    function toggleBounce() {
+        if (playerMarker.getAnimation() !== null) {
+            playerMarker.setAnimation(null);
+        } else {
+            playerMarker.setAnimation(google.maps.Animation.BOUNCE);
+        }
+      }
 
 
 //Add listener

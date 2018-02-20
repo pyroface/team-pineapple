@@ -224,7 +224,7 @@ MODAL STYLING
     border-radius: .8em;
     background: #27ae60;
     text-align: center;
-    text-transform: uppercase;
+   /*  text-transform: uppercase; */
 }
 
 /* .modal-body button {
@@ -246,6 +246,7 @@ MODAL STYLING
 }
 .normal {
     letter-spacing: normal;
+    word-wrap: normal;
 }
 
         </style>
@@ -266,6 +267,7 @@ MODAL STYLING
                 <div class="SignUpButton">
                     <input type="button" name="" value="SIGN UP" class="btn btn-warning signUp" data-toggle="modal" data-target="#signUpModal" />
                     <input type="button" name="" value="SIGN IN" class="btn btn-primary signIn" data-toggle="modal" data-target="#signInModal" />
+                  <!--   <input type="button" name="" value="SIGN IN" class="btn btn-primary signIn" data-toggle="modal" data-target="#exampleModal" /> -->
                 </div>                
                 <img class="bild img-fluid ml-75" src="img/mobile.png">
             </div>
@@ -310,6 +312,36 @@ MODAL STYLING
                 </div>
               </div>
             </div><!-- End of Modal #1 -->
+
+
+            <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title mx-auto pl-5 text-black" id="exampleModalLabel">Information</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+                <img src="img/pwa.gif" alt="">
+                <p class="normal">
+                   To gain the best experinece of the game save it to your home screen!!!  
+                </p>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- ends -->
+
+
 
 
         <?php
