@@ -77,8 +77,8 @@
 
 
           <section class="index__profile black-background vh-100 pt-5">
-                <img src="../img/avatar.jpg" alt="game-avatar" class="img-thumbnail rounded mx-auto d-block h-25  rounded-circle" >
-                <h1 class="text-light text-center">Joe Doe</h1>
+                <img src="../img/trophy.png" alt="game-avatar" class=" rounded mx-auto d-block h-25  black-background" >
+                <h1 class="text-light text-center">Leaderboard</h1>
 
               <!--  
               <div class ="container">
