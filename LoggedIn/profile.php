@@ -75,7 +75,7 @@
           <section class="index__profile black-background">
                 <img src="../img/avatar.jpg" alt="game-avatar" class="img-thumbnail rounded mx-auto d-block h-25  rounded-circle">
                 <h1 class="text-light text-center">Joe Doe</h1>
-
+                <table class="table table-hover table-dark">
 
   <thead>
   <tr>
