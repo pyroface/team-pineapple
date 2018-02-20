@@ -123,6 +123,131 @@
 .modal-backdrop {
     z-index: -1;
 }
+* {
+    font-family: 'Chela One', cursive;
+    color: white;
+    letter-spacing: 2px;
+}
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.container h1 {
+    font-size: 90px;
+    color: white;
+    text-shadow: 2px 2px darkgrey;
+    margin-left: -20px;
+}
+
+#background {
+    background: url(../pictures/cityPicture1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 1;
+}
+.dev-footer {
+    margin: -80px 0 0 0;
+    height: 80px;
+    text-align: center;
+    padding: 10px 0 0 0px;
+    width: 100%;
+}
+.dev-footer p {
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 2px 2px darkgrey;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* BOOTSTRAP BUTTON STYLING */
+/* .btn {
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #ffc01f;
+} */
+
+
+/* ==================================================================================
+MODAL STYLING
+================================================================================== */
+
+
+.modal-dialog .modal-content {
+    text-align: center;
+    background-color: #9b59b6; 
+    border: 2px solid;
+    border-radius: .8em;
+    text-transform: uppercase;
+    text-shadow: 2px 2px #9b59b6;
+}
+
+.modal-dialog .modal-header {
+    justify-content: center;
+    border-bottom: 2px solid #9b59b6;
+    text-transform: uppercase;
+    text-shadow: 2px 2px #9b59b6;
+}
+
+.modal-body {
+    display: flex;
+    justify-content: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px #9b59b6;
+}
+
+.modal-body h2 {
+    font-size: 50px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px #9b59b6;
+}
+
+.modal-body h3 {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    text-shadow: 2px 2px #9b59b6;
+}
+
+.modal-body input{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border: 2px solid;
+    border-radius: .8em;
+    background: #27ae60;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* .modal-body button {
+    background:#9b59b6;
+    border: 2px solid;
+    border-radius: 0.8em;
+    text-transform: uppercase;
+} */
+
+*:focus {
+    outline: none !important;
+}
+*:active {
+    outline: none !important;
+}
+
+.text-black {
+    color: #212529;
+}
+.normal {
+    letter-spacing: normal;
+}
+
         </style>
     </head>
 
@@ -130,8 +255,8 @@
 
         <section class="col-md-6 col-sm-12 page-text-section">
             <div class="page-text-div">
-                <h1>CATCH COINS💰</h1>   
-                <p>
+                <h1 class="text-black normal">CATCH💰COINS</h1>   
+                <p class="text-black">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                     Curabitur quis lectus tempus, mattis diam vitae, facilisis nisl. 
                     Quisque eleifend, mi a consequat suscipit, metus massa auctor sapien, 
@@ -152,33 +277,34 @@
               <div class="modal-content">
                 <button type="button" class="close" data-dismiss="modal"><i class="icon-xs-o-md"></i></button>
                   <div class="modal-header">
-                    <h4 class="modal-title caps"><strong>Create Account</strong></h4>
+               <!--      <h4 class="modal-title caps mx-auto"><strong>Create Account</strong></h4> -->
+                        <label class="display-4 mx-auto pl-5">Create!!!</label>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                   </div>
                   <div class="modal-body">
                     <form method="post">
                       <div class="form-group">
                         <label for="usr">Username:</label>
-                        <input type="text" name="username" class="form-control" id="usr" placeholder="Enter username..." required />
+                        <input type="text" name="username" id="usr" placeholder="Enter username..." required />
                       </div>
                       <div class="form-group">
                         <label for="pwd">Password:</label>
-                        <input type="password" name="password" class="form-control" id="pwd" placeholder="Enter password..." required />
+                        <input type="password" name="password"id="pwd" placeholder="Enter password..." required />
                       </div>
-                      <div class="imageupload panel panel-default">
+<!--                       <div class="imageupload panel panel-default">
                         <label for="image">Profile Image</label>
                         <div class="input-group mb-3">
                             <div class="custom-file">
                               <input type="file" name="image" class="custom-file-input" id="inputGroupFile02">
                               <label class="custom-file-label" for="inputGroupFile02">Upload image</label>
                             </div>
-                          </div>
-                        <div class="file-tab panel-body">
+                          </div> -->
+<!--                         <div class="file-tab panel-body">
                           <label class="btn btn-default btn-file">
                           </label>
-                        </div>
-                      </div>
-                      <button type="submit" name="create" class="btn btn-primary">Create</button>
+                        </div> -->
+                    
+                      <button type="submit" name="create" class="btn btn-warning">Create</button>
                     </form>
                   </div>
                 </div>
@@ -234,18 +360,19 @@
                 <div class="modal-content">
                   <button type="button" class="close" data-dismiss="modal"><i class="icon-xs-o-md"></i></button>
                   <div class="modal-header">
-                    <h4 class="modal-title caps"><strong>Sign In</strong></h4>
+         <!--            <h4 class="modal-title caps  mx-auto pl-5"><strong>Sign In</strong></h4> -->
+                   <label class="display-4 mx-auto pl-5">Sign In</label>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                   </div>
                   <div class="modal-body">
                     <form method="post">
                       <div class="form-group">
                         <label for="usr">Username:</label>
-                        <input type="text" name="usr" class="form-control"  placeholder="Enter username..." required />
+                        <input type="text" name="usr"  placeholder="Enter username..." required />
                       </div>
                       <div class="form-group">
                         <label for="pwd">Password:</label>
-                        <input type="password" name="pwd" class="form-control" placeholder="Enter password..." required />
+                        <input type="password" name="pwd"  placeholder="Enter password..." required />
                       </div>
                       <button type="submit" name="loginButton" class="btn btn-primary">Sign In</button>                            
                     </form>
