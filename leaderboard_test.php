@@ -1,4 +1,5 @@
 <!--Leos test fil-->
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -25,7 +26,7 @@
    </style>
   </head>
   <body>
-   <table>
+  <table>
     <tr>
       <th>Id</th> 
       <th>Username</th>
@@ -39,7 +40,7 @@
          die("Connection failed: " . $conn->connect_error);
         }
 
-        $sql = "SELECT ID, Username, Score, Password FROM accounts";
+        $sql = "SELECT ID, Username, Score FROM accounts ORDER BY Score DESC";
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
          // output data of each row
@@ -54,5 +55,15 @@
         $conn->close();
       ?>
     </table>
+
+
+
   </body>
 </html>
+
+
+
+
+
+
+
