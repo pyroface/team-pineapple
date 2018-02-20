@@ -2,6 +2,7 @@
 Easily make an element as tall (relative to browser viewport) with our height utilities.
 Includes support for 25%, 50%, 75%, and 100% by default. (Only height)
 */
+
 .vh-25 {
     height: 25vh !important;
 }
@@ -177,6 +178,7 @@ Includes support for 25%, 50%, 75%, and 100% by default. (Only height)
   }
   .black-background {
       background: var(--black);
+      height: 100vh;
   }
 
   /* --- Variables end -----------*/

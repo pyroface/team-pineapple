@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="../css/offcanvas.css" rel="stylesheet">
     <link href="../css/hamburgers.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/profile.css">
+    <link href="../css/profile.css" rel="stylesheet" >
     <style>
       @import url('https://fonts.googleapis.com/css?family=Varela+Round');
       a {
@@ -72,8 +72,8 @@
 
 
 
-          <section class="index__profile black-background">
-                <img src="../img/avatar.jpg" alt="game-avatar" class="img-thumbnail rounded mx-auto d-block h-25  rounded-circle">
+          <section class="index__profile black-background vh-100 pt-5">
+                <img src="../img/avatar.jpg" alt="game-avatar" class="img-thumbnail rounded mx-auto d-block h-25  rounded-circle" >
                 <h1 class="text-light text-center">Joe Doe</h1>
                 <table class="table table-hover table-dark">
 
