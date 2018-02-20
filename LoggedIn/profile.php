@@ -35,6 +35,10 @@
       color: #ffc107!important;
       }
 
+      tr:nth-child(even){
+        background-color: gray;
+      }
+
 
 
     </style>
@@ -76,63 +80,64 @@
                 <img src="../img/avatar.jpg" alt="game-avatar" class="img-thumbnail rounded mx-auto d-block h-25  rounded-circle" >
                 <h1 class="text-light text-center">Joe Doe</h1>
 
-              <!--  <div class ="container">
+              <!--  
+              <div class ="container">
                 <table class="table table-hover table-dark">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Username</th>
+                  <th scope="col">Score</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Carl</td>
+                  <td>?</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Guled</td>
+                  <td>?</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Anna</td>
+                  <td>?</td>
+                </tr>
+              </tbody>
+              </table>
+              -->
 
-<thead>
-  <tr>
-    <th scope="col">#</th>
-    <th scope="col">Username</th>
-    <th scope="col">Score</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <th scope="row">1</th>
-    <td>Carl</td>
-    <td>?</td>
-  </tr>
-  <tr>
-    <th scope="row">2</th>
-    <td>Guled</td>
-    <td>?</td>
-  </tr>
-  <tr>
-    <th scope="row">3</th>
-    <td>Anna</td>
-    <td>?</td>
-  </tr>
-</tbody>
-</table>-->
 <div class = "container">
 <table class="table bg-white w-75 mt-5 mx-auto">
   <thead class="thead-dark">
     <tr>
-      <th scope="col">Rank</th>
       <th scope="col">Username</th>
       <th scope="col">Score</th>      
     </tr>
   </thead>
-  <tbody>
-    <tr class="bg-warning">
-      <th scope="row">1</th>
-      <td>Carl</td>
-      <td>200</td>
-      
-    </tr>
-    <tr>
-      <th scop="row">2</th>
-      <td>Guled</td>
-      <td>400</td>
-      
-    </tr>
-    <tr class="bg-warning">
-      <th scope="row">3</th>
-      <td>Anna</td>
-      <td>100</td>
-      
-    </tr>
-  </tbody>
+     <?php
+        $conn = mysqli_connect("localhost", "root", "", "catchcoins");
+        // Check connection
+        if ($conn->connect_error) {
+         die("Connection failed: " . $conn->connect_error);
+        }
+
+        $sql = "SELECT Username, Score FROM accounts ORDER BY Score DESC";
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
+         // output data of each row
+         while($row = $result->fetch_assoc()) {
+          echo "<tr><td>" .  
+            $row["Username"] . "</td><td>" .
+            $row["Score"] . "</td></tr>";
+          }
+        echo "</table>";
+        } else { echo "0 results"; }
+        $conn->close();
+      ?>
 </table>
 
 </div>
