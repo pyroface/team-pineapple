@@ -61,13 +61,10 @@
             <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
               <ul class="navbar-nav mr-auto mt-5 text-center">
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Profile <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="#">Leaderboard<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="game.html">Game</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Team-admin/Leaderboard</a>
+                  <a class="nav-link" href="game.php">Game</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="../index.php">Logout</a>
