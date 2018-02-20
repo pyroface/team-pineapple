@@ -414,6 +414,7 @@ function runGame(pos) {
             coinMarkers[i].setMap(null);
             console.log("Player " + firstPlayer + "got " + coinMarkers[i].my_value + " more coins!");
             var data = {value: coinMarkers[i].my_value, playerid: firstPlayer.PlayerID};
+            coinMarkers[i].my_value = 0;
             console.log(data);
             
             var request = new Request(api_url + "users", {
