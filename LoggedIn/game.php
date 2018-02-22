@@ -163,6 +163,19 @@ MODAL STYLING
     word-wrap: normal;
 }
 
+.swal-modal {
+  background-color: rgba(63,255,106,0.69);
+  border: 3px solid white;
+}
+
+.swal-title {
+  margin: 0px;
+  font-size: 16px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.21);
+  margin-bottom: 28px;
+  color: #fff;
+}
+
   
 
     </style>
@@ -219,6 +232,8 @@ MODAL STYLING
                 </div>
               </div>
             </div>
+
+       
             <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2zN8wobSAuw_ejpGz9ll31ZMQL-iV7JE&libraries=geometry" type="text/javascript"></script>
           </section>
 <!--           <div id="clockdiv">

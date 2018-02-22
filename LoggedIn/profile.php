@@ -44,6 +44,9 @@
       .game-green {
         background: #1abc9c !important;
       }
+      .title {
+        font-family: "Varela round";
+      }
 
     </style>
 
@@ -79,7 +82,7 @@
 
           <section class="index__profile vh-100 pt-5 game-green">
                 <img src="../img/trophy.png" alt="game-avatar" class=" rounded mx-auto d-block h-25  game-green" >
-                <h1 class="text-light text-center">Leaderboard</h1>
+                <h1 class="text-warning text-center title">Leaderboard</h1>
 
               <!--  
               <div class ="container">
@@ -112,8 +115,8 @@
               -->
 
 <div class = "container">
-<table class="table bg-white w-75 mt-5 mx-auto">
-  <thead class="thead-dark">
+<table class="table bg-white w-75 mt-5 mx-auto rounded">
+  <thead class="thead-dark rounded">
     <tr>
       <th scope="col">Username</th>
       <th scope="col">Score</th>      
