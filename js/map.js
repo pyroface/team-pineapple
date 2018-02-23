@@ -333,7 +333,7 @@ function showMap(lat, lon) {
   var map = new google.maps.Map(document.querySelector('.map'), mapOptions);
 
   var cluster = {
-    url: "m3.png", // url
+    url: "../img/m3.png", // url
     scaledSize: new google.maps.Size(50, 50), // scaled size
     origin: new google.maps.Point(0, 0), // origin
     anchor: new google.maps.Point(0, 0) // anchor
@@ -406,7 +406,7 @@ function showMap(lat, lon) {
 
       // Coin 1
       var icon1 = {
-        url: "coints.png", // url
+        url: "../img/coints.png", // url
         scaledSize: new google.maps.Size(50, 50), // scaled size
         origin: new google.maps.Point(0, 0), // origin
         anchor: new google.maps.Point(0, 0) // anchor
@@ -426,7 +426,7 @@ function showMap(lat, lon) {
 
       // Coin 2
       var icon2 = {
-        url: "coints.png", // url
+        url: "../img/coints.png", // url
         scaledSize: new google.maps.Size(50, 50), // scaled size
         origin: new google.maps.Point(0, 0), // origin
         anchor: new google.maps.Point(0, 0) // anchor
@@ -447,7 +447,7 @@ function showMap(lat, lon) {
       
       // Coin 3
       var icon3 = {
-        url: "coints.png", // url
+        url: "../img/coints.png", // url
         scaledSize: new google.maps.Size(50, 50), // scaled size
         origin: new google.maps.Point(0, 0), // origin
         anchor: new google.maps.Point(0, 0) // anchor
@@ -467,7 +467,7 @@ function showMap(lat, lon) {
 
       // Coin 4
       var icon4 = {
-        url: "coints.png", // url
+        url: "../img/coints.png", // url
         scaledSize: new google.maps.Size(50, 50), // scaled size
         origin: new google.maps.Point(0, 0), // origin
         anchor: new google.maps.Point(0, 0) // anchor
@@ -490,7 +490,7 @@ function showMap(lat, lon) {
   
       // Coin 5
       var icon5 = {
-        url: "treasure.png", // url
+        url: "../img/treasure.png", // url
         scaledSize: new google.maps.Size(50, 50), // scaled size
         origin: new google.maps.Point(0, 0), // origin
         anchor: new google.maps.Point(0, 0) // anchor
@@ -512,7 +512,7 @@ function showMap(lat, lon) {
 
       //  Player 1
       var player1 = {
-        url: "red_MarkerB.png", // url
+        url: "../img/red_MarkerB.png", // url
         scaledSize: new google.maps.Size(35, 35), // scaled size
         origin: new google.maps.Point(0, 0), // origin
         anchor: new google.maps.Point(0, 0) // anchor
@@ -553,7 +553,7 @@ function showMap(lat, lon) {
       
       //  Player 2
       var player2 = {
-        url: "blue_MarkerB.png", // url
+        url: "../img/blue_MarkerB.png", // url
         scaledSize: new google.maps.Size(35, 35), // scaled size
         origin: new google.maps.Point(0, 0), // origin
         anchor: new google.maps.Point(0, 0) // anchor
@@ -594,7 +594,7 @@ function showMap(lat, lon) {
       
       //  Player 3
       var player3 = {
-        url: "yellow_MarkerA.png", // url
+        url: "../img/yellow_MarkerA.png", // url
         scaledSize: new google.maps.Size(30, 30), // scaled size
         origin: new google.maps.Point(0, 0), // origin
         anchor: new google.maps.Point(0, 0) // anchor
@@ -669,6 +669,7 @@ function showMap(lat, lon) {
       
         delete icon1.url;
         delete coin1.position;
+        alert("You've found a coin!");
       }
 
       // coin2
@@ -676,6 +677,7 @@ function showMap(lat, lon) {
       
         delete icon2.url;
         delete coin2.position;
+        alert("You've found a coin!");
       }
 
       // coin3
@@ -683,6 +685,7 @@ function showMap(lat, lon) {
       
         delete icon3.url;
         delete coin3.position;
+        alert("You've found a coin!");
       }
 
       // coin4
@@ -690,6 +693,7 @@ function showMap(lat, lon) {
       
         delete icon4.url;
         delete coin4.position;
+        alert("You've found a coin!");
       }
 
       // coin5
@@ -697,6 +701,7 @@ function showMap(lat, lon) {
       
         delete icon5.url;
         delete coin5.position;
+        alert("You've found a coin!");
       }
 }
 

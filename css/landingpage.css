@@ -299,17 +299,6 @@ tr:nth-child(even) {
 
 
 
-
- /*--------  profile section  ------------- */
-
-  .progress {
-      background-color: #fff;
-  }
-
- /* -------- profile section ends ----------------- */
-
-
-
   /*---- Form validation---- */
 
   .red-shadow {
@@ -353,45 +342,3 @@ h2{
 
 
 /* -------- index__group end --------- */
-/* -------- Map timer start --------- */
-h1{
-  color: #396;
-  font-weight: 100;
-  font-size: 40px;
-  margin: 40px 0px 20px;
-}
-
-#clockdiv{
-	font-family: sans-serif;
-	font-weight: 100;
-	text-align: center;
-	font-size: 30px;
-  position: absolute;
-  left:44%;
-
-}
-
-#clockdiv > div{
-	padding: 10px;
-	border-radius: 3px;
-	background: #00BF96;
-	display: inline-block;
-}
-
-#clockdiv div > span{
-	padding: 15px;
-	border-radius: 3px;
-	background: #00816A;
-}
-
-.smalltext{
-	padding-top: 5px;
-	font-size: 16px;
-}
-@media only screen and (max-width: 376px) {
-    #clockdiv {
-      top: 1026px;
-      left: 95px;
-
-    }
-/* -------- Map timer end --------- */
