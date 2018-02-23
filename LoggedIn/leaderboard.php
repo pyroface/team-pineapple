@@ -47,6 +47,15 @@
       .title {
         font-family: "Varela round";
       }
+      .leader-cover {
+        background-image: url("../img/background-cover2.jpg");
+        background-size: cover;
+      }
+      .transparent {
+        width: 100%;
+        height: 100%;
+        background: rgba(245, 245, 245, 0.295)
+      }
 
     </style>
 
@@ -80,8 +89,9 @@
 
 
 
-          <section class="index__profile vh-100 pt-5 game-green">
-                <img src="../img/trophy.png" alt="game-avatar" class=" rounded mx-auto d-block h-25  game-green" >
+          <section class="index__profile vh-100  leader-cover p-0">
+          <div class="transparent pt-4">
+                <img src="../img/trophy.png" alt="game-avatar" class=" rounded mx-auto d-block h-25 bg-dark rounded-circle" >
                 <h1 class="text-warning text-center title">Leaderboard</h1>
 
               <!--  
@@ -118,8 +128,8 @@
 <table class="table bg-white w-75 mt-5 mx-auto rounded">
   <thead class="thead-dark rounded">
     <tr>
-      <th scope="col">Username</th>
-      <th scope="col">Score</th>      
+      <th class="title text-warning" scope="col">Username</th>
+      <th class="title text-warning" scope="col">Score</th>      
     </tr>
   </thead>
      <?php
@@ -144,6 +154,7 @@
       ?>
 </table>
 
+</div>
 </div>
     </section>
 

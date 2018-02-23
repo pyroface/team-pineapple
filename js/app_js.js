@@ -406,34 +406,13 @@ function coinMarker() {
 
 
 
-var contentString = `
-<div id="content">
-<div id="siteNotice">
-</div>
-<h1 id="firstHeading" class="firstHeading">You have ${coinMarkers[i].my_value}</h1>
-</div>;
-`;
 
-// Skriv om koden så att man inte behöver en event
-var infowindow = new google.maps.InfoWindow({
-content: contentString
-});
 
-var marker = new google.maps.Marker({
-position: uluru,
-map: map,
-title: 'Uluru (Ayers Rock)'
-});
-
-//  coinMarkers[i].setMap(null);
-marker.addListener('click', function() {
-infowindow.open(map, marker);
-});
 
 
 
 function runGame(pos) {
-    var contentString = '<div id="content">'+
+/*     var contentString = '<div id="content">'+
     '<div id="siteNotice">'+
     '</div>'+
     '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
@@ -452,10 +431,9 @@ function runGame(pos) {
     'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
     '(last visited June 22, 2009).</p>'+
     '</div>'+
-    '</div>';
-    var infowindow = new google.maps.InfoWindow({
-        content: contentString
-        });
+    '</div>'; */
+    
+
    
     playerMarker.setPosition(new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude));
     for (var i = 0; i < coinMarkers.length; i++) {
@@ -489,6 +467,16 @@ function runGame(pos) {
             // TODO POST via Fetch() till API:et
 
         }
+        var contentString = `
+        <div id="content">
+        <div id="siteNotice">
+        <h1 id="firstHeading" class="firstHeading">You got ${coinMarkers[i].my_value}💰</h1>
+        </div>
+        </div>;
+        `;
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString
+            });
     
     }
 }

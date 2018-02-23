@@ -96,18 +96,18 @@ MODAL STYLING
 
 .modal-dialog .modal-content {
     text-align: center;
-    background-color: #9b59b6; 
+    background-color: #27ae60;
     border: 2px solid;
     border-radius: .8em;
     text-transform: uppercase;
-    text-shadow: 2px 2px #9b59b6;
+    text-shadow: 2px 2px #27ae60;
 }
 
 .modal-dialog .modal-header {
     justify-content: center;
-    border-bottom: 2px solid #9b59b6;
+    border-bottom: 2px solid #27ae60;
     text-transform: uppercase;
-    text-shadow: 2px 2px #9b59b6;
+    text-shadow: 2px 2px #27ae60;
 }
 
 .modal-body {
@@ -115,19 +115,19 @@ MODAL STYLING
     justify-content: center;
     letter-spacing: 2px;
     text-transform: uppercase;
-    text-shadow: 2px 2px #9b59b6;
+    text-shadow: 2px 2px #27ae60;
 }
 
 .modal-body h2 {
     font-size: 50px;
     text-transform: uppercase;
-    text-shadow: 2px 2px #9b59b6;
+    text-shadow: 2px 2px #27ae60;
 }
 
 .modal-body h3 {
     font-size: 1.25rem;
     text-transform: uppercase;
-    text-shadow: 2px 2px #9b59b6;
+    text-shadow: 2px 2px #27ae60;
 }
 
 .modal-body input{
@@ -163,19 +163,6 @@ MODAL STYLING
     word-wrap: normal;
 }
 
-.swal-modal {
-  background-color: rgba(63,255,106,0.69);
-  border: 3px solid white;
-}
-
-.swal-title {
-  margin: 0px;
-  font-size: 16px;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.21);
-  margin-bottom: 28px;
-  color: #fff;
-}
-
   
 
     </style>
@@ -196,7 +183,7 @@ MODAL STYLING
             <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
               <ul class="navbar-nav mr-auto mt-5 text-center">
                 <li class="nav-item">
-                  <a class="nav-link" href="profile.php">Leaderboard<span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="leaderboard.php">Leaderboard<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="game.php">Game</a>
