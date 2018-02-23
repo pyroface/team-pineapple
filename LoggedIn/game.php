@@ -195,12 +195,6 @@ MODAL STYLING
             </div>
           </nav>
 
-
-        <!-- index__map start -->
-
-        <section class="index__map col-12 p-2 map">
-            <!--<script src="../js/app_js.js">
-            </script> -->
           <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -219,6 +213,14 @@ MODAL STYLING
                 </div>
               </div>
             </div>
+
+
+        <!-- index__map start -->
+
+        <section class="index__map col-12 p-2 map">
+            <!--<script src="../js/app_js.js">
+            </script> -->
+          
 
        
             <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2zN8wobSAuw_ejpGz9ll31ZMQL-iV7JE&libraries=geometry" type="text/javascript"></script>
