@@ -2,10 +2,10 @@
 -- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
--- Värd: localhost
--- Tid vid skapande: 12 feb 2018 kl 15:50
--- Serverversion: 10.1.28-MariaDB
--- PHP-version: 7.1.11
+-- Värd: 127.0.0.1
+-- Tid vid skapande: 23 feb 2018 kl 15:02
+-- Serverversion: 10.1.30-MariaDB
+-- PHP-version: 7.2.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -28,25 +28,24 @@ SET time_zone = "+00:00";
 -- Tabellstruktur `accounts`
 --
 
-DROP TABLE IF EXISTS `accounts`;
-CREATE TABLE IF NOT EXISTS `accounts` (
-  `ID` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `accounts` (
+  `ID` int(11) NOT NULL,
   `Username` varchar(15) COLLATE utf8_bin NOT NULL,
   `Password` int(11) NOT NULL,
-  `Score` int(11) NOT NULL,
-  `Image` blob NOT NULL,
-  PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+  `Score` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Dumpning av Data i tabell `accounts`
 --
 
-INSERT INTO `accounts` (`ID`, `Username`, `Password`, `Score`, `Image`) VALUES
-(1, '', 0, 0, ''),
-(2, 'leo', 666666, 0, 0x333730353531393439392e6a7067),
-(3, 'bajs', 0, 0, ''),
-(4, 'tsttest', 0, 0, '');
+INSERT INTO `accounts` (`ID`, `Username`, `Password`, `Score`) VALUES
+(1, 'anna', 111, 100),
+(2, 'leo', 222, 200),
+(3, 'guled', 333, 300),
+(4, 'carl', 444, 400),
+(5, 'kanya', 555, 500),
+(6, 'lisa', 666, 600);
 
 -- --------------------------------------------------------
 
@@ -54,14 +53,12 @@ INSERT INTO `accounts` (`ID`, `Username`, `Password`, `Score`, `Image`) VALUES
 -- Tabellstruktur `coins`
 --
 
-DROP TABLE IF EXISTS `coins`;
-CREATE TABLE IF NOT EXISTS `coins` (
-  `ID` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `coins` (
+  `ID` int(11) NOT NULL,
   `lat` varchar(15) COLLATE utf8_bin NOT NULL,
   `lng` varchar(15) COLLATE utf8_bin NOT NULL,
-  `value` int(11) NOT NULL,
-  PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+  `value` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Dumpning av Data i tabell `coins`
@@ -69,7 +66,43 @@ CREATE TABLE IF NOT EXISTS `coins` (
 
 INSERT INTO `coins` (`ID`, `lat`, `lng`, `value`) VALUES
 (1, '59.313453', '18.110636', 100),
-(2, '59.311710', '18.110991', 200);
+(2, '59.311710', '18.110991', 200),
+(3, '59.311502', '18.104389', 100),
+(4, '59.313472', '18.106649', 200),
+(5, '59.314939', '18.110146', 300),
+(6, '59.315305', '18.114417', 300);
+
+--
+-- Index för dumpade tabeller
+--
+
+--
+-- Index för tabell `accounts`
+--
+ALTER TABLE `accounts`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Index för tabell `coins`
+--
+ALTER TABLE `coins`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- AUTO_INCREMENT för dumpade tabeller
+--
+
+--
+-- AUTO_INCREMENT för tabell `accounts`
+--
+ALTER TABLE `accounts`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT för tabell `coins`
+--
+ALTER TABLE `coins`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

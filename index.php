@@ -361,10 +361,10 @@ MODAL STYLING
             // Escape user inputs for security
             $name = mysqli_real_escape_string($link, $_REQUEST['username']);
             $password= mysqli_real_escape_string($link, $_REQUEST['password']);
-            $image = mysqli_real_escape_string($link, $_REQUEST['image']);
+            
             
             // attempt insert query execution
-            $sql = "INSERT INTO accounts (Username, Password, Image) VALUES ('$name', '$password', '$image')";
+            $sql = "INSERT INTO accounts (Username, Password) VALUES ('$name', '$password')";
             if(mysqli_query($link, $sql)){
                 echo "Records added successfully.";
             } else{
