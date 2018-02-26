@@ -23,10 +23,10 @@ REST.prototype.connectMysql = function() {
     var self = this;
     var pool      =    mysql.createPool({
         connectionLimit : 100,
-        host     : '195.154.182.162',
-        user     : 'u4220971_game',
-        password : 'Catchcoins123456',
-        database : 'u4220971_catchcoins',
+        host     : 'crockett.highstone.biz',
+        user     : 'pineapple',
+        password : 'pineapple123',
+        database : 'catchcoins',
         debug    :  true
     });
     pool.getConnection(function(err,connection){
