@@ -1,8 +1,9 @@
 {
   "name": "RESTful-API",
   "version": "0.0.1",
+  "main": "node/Server.js",
   "scripts": {
-    "start": "node Server.js"
+    "start": "node node/Server.js"
   },
   "dependencies": {
     "express": "~4.12.2",
