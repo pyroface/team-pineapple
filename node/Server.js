@@ -23,11 +23,13 @@ REST.prototype.connectMysql = function() {
     var self = this;
     var pool      =    mysql.createPool({
         connectionLimit : 100,
-        host     : 'localhost',
-        user     : 'root',
-        password : '',
-        database : 'catchcoins',
-        debug    :  false
+        connectTimeout  : 60 * 60 * 1000,
+        aquireTimeout   : 1000,
+        host     : '195.154.182.162',
+        user     : 'u4220971_game',
+        password : 'Catchcoins123456',
+        database : 'u4220971_catchcoins',
+        debug    :  true
     });
     pool.getConnection(function(err,connection){
         if(err) {
