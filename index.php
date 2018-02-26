@@ -1,4 +1,4 @@
-<?php            $conn = mysqli_connect("localhost", "root", "", "catchcoins");
+<?php            $conn = mysqli_connect("crockett.highstone.biz", "pineapple", "pineapple123", "catchcoins");
             //echo ("yo!!!!");
             if(isset($_POST['loginButton'])) {
                 // username and password sent from form 
@@ -9,6 +9,7 @@
                 $sql = "SELECT * FROM accounts WHERE Username = '$myusername' AND Password = '$mypassword'";
                 
                 $result = $conn->query($sql);
+                echo $result->fetch_assoc()['ID'];
 
                 //$mysqli_result = mysqli_query($conn,$sql);
                 //$row = mysqli_fetch_array($mysqli_result,MYSQLI_ASSOC);
@@ -21,7 +22,7 @@
                  
                     $_SESSION['usr'] = $myusername;
                     $ID = $result->fetch_assoc()['ID'];
-                    header("location: Loggedin/game.php?currentUser=$ID");
+                    header("location: LoggedIn/game.php?currentUser=$ID");
                 }
                 else {
                     $error = "Your Login Name or Password is invalid";
@@ -351,7 +352,7 @@ MODAL STYLING
         if(isset($_POST['create'])) {
             /* Attempt MySQL server connection. Assuming you are running MySQL
             server with default setting (user 'root' with no password) */
-            $link = mysqli_connect("localhost", "root", "", "catchcoins");
+            $link = mysqli_connect("crockett.highstone.biz", "pineapple", "pineapple123", "catchcoins");
             
             // Check connection
             if($link === false){
@@ -362,9 +363,8 @@ MODAL STYLING
             $name = mysqli_real_escape_string($link, $_REQUEST['username']);
             $password= mysqli_real_escape_string($link, $_REQUEST['password']);
             
-            
             // attempt insert query execution
-            $sql = "INSERT INTO accounts (Username, Password) VALUES ('$name', '$password')";
+            $sql = "INSERT INTO accounts (Username, Password, Score) VALUES ('$name', '$password', 0)";
             if(mysqli_query($link, $sql)){
                 echo "Records added successfully.";
             } else{
