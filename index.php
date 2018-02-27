@@ -53,6 +53,7 @@
         <link rel="shortcut icon" href="img/logo.png" sizes="96x96">
         <link rel="apple-touch-icon" href="img/logo.png" sizes="180x180">
         <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Short+Stack" rel="stylesheet">
 
         <title>Catchcoins💰</title>
         <style>
@@ -126,7 +127,7 @@
     z-index: -1;
 }
 * {
-    font-family: 'Chela One', cursive;
+    font-family: 'Short Stack', cursive;
     color: white;
     letter-spacing: 2px;
 }

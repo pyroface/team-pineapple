@@ -14,6 +14,8 @@
     <link href="../css/hamburgers.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/game.css">
     <link href="../css/profile.css" rel="stylesheet" >
+    <link href="https://fonts.googleapis.com/css?family=Itim" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Short+Stack" rel="stylesheet">
     <style>
       @import url('https://fonts.googleapis.com/css?family=Varela+Round');
       a {
@@ -39,7 +41,7 @@
       }
   
        .modal-font {
-    font-family: 'Chela One', cursive;
+    font-family: 'Short Stack', cursive;
     color: white;
     letter-spacing: 2px; */
 }
