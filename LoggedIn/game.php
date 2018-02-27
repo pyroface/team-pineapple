@@ -13,6 +13,7 @@
     <link href="../css/offcanvas.css" rel="stylesheet">
     <link href="../css/hamburgers.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/game.css">
+    <link href="../css/profile.css" rel="stylesheet" >
     <style>
       @import url('https://fonts.googleapis.com/css?family=Varela+Round');
       a {
@@ -37,18 +38,18 @@
       color: #ffc107!important;
       }
   
-      * {
+       .modal-font {
     font-family: 'Chela One', cursive;
     color: white;
-    letter-spacing: 2px;
+    letter-spacing: 2px; */
 }
-.container {
+/* .container {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-}
+} 
 .container h1 {
     font-size: 90px;
     color: white;
@@ -163,7 +164,57 @@ MODAL STYLING
     word-wrap: normal;
 }
 
-  
+
+
+
+/* ------------------------------ Leaderboard css------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+      a {
+        font-family: 'Varela Round', sans-serif;
+        font-size: 40px;
+      }
+      .bg-own {
+        background: #8e44ad !important;
+      }
+
+      .navbar-brand {
+      display: inline-block;
+      padding-top: 0rem;
+      padding-bottom: 0rem;
+      margin-right: 1rem;
+      font-size: 1.25rem;
+      line-height: inherit;
+      white-space: nowrap;
+      }
+
+      .navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
+      color: #ffc107!important;
+      }
+
+      tr:nth-child(even){
+        background-color: gray;
+      }
+
+      .game-green {
+        background: #1abc9c !important;
+      }
+      .title {
+        font-family: "Varela round";
+      }
+      .leader-cover {
+        background-image: url("../img/background-cover2.jpg");
+        background-size: cover;
+      }
+      .transparent {
+        width: 100%;
+        height: 100%;
+        background: rgba(245, 245, 245, 0.295)
+      }
+
+      ::-webkit-scrollbar { 
+        display: none; 
+      }
+
 
     </style>
 
@@ -183,10 +234,10 @@ MODAL STYLING
             <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
               <ul class="navbar-nav mr-auto mt-5 text-center">
                 <li class="nav-item">
-                  <a class="nav-link" href="leaderboard.php">Leaderboard<span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="#leaderboard-section">Leaderboard<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="game.php">Game</a>
+                  <a class="nav-link" href="#game-section">Game</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="../index.php">Logout</a>
@@ -195,7 +246,7 @@ MODAL STYLING
             </div>
           </nav>
 
-          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal fade modal-font" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
@@ -217,7 +268,7 @@ MODAL STYLING
 
         <!-- index__map start -->
 
-        <section class="index__map col-12 p-2 map">
+        <section id="game-section" class="index__map col-12 p-2 map">
             <!--<script src="../js/app_js.js">
             </script> -->
           
@@ -239,8 +290,82 @@ MODAL STYLING
          </div>
   
           <!-- index__map ends -->
+
+
+
+
+
+
+          <!--Load in leaderboard -->
   
-  
+          <section id="leaderboard-section" class="index__profile vh-100  leader-cover p-0">
+          <div class="transparent pt-4">
+                <img src="../img/trophy.png" alt="game-avatar" class=" rounded mx-auto d-block h-25 bg-dark rounded-circle" >
+                <h1 class="text-warning text-center title">Leaderboard</h1>
+
+              <!--  
+              <div class ="container">
+                <table class="table table-hover table-dark">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Username</th>
+                  <th scope="col">Score</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Carl</td>
+                  <td>?</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Guled</td>
+                  <td>?</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Anna</td>
+                  <td>?</td>
+                </tr>
+              </tbody>
+              </table>
+              -->
+
+<div class = "container">
+<table class="table bg-white w-75 mt-5 mx-auto rounded">
+  <thead class="thead-dark rounded">
+    <tr>
+      <th class="title text-warning" scope="col">Username</th>
+      <th class="title text-warning" scope="col">Score</th>      
+    </tr>
+  </thead>
+     <?php
+        $conn = mysqli_connect("localhost", "root", "", "catchcoins");
+        // Check connection
+        if ($conn->connect_error) {
+         die("Connection failed: " . $conn->connect_error);
+        }
+
+        $sql = "SELECT Username, Score FROM accounts ORDER BY Score DESC LIMIT 5";
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
+         // output data of each row
+         while($row = $result->fetch_assoc()) {
+          echo "<tr><td>" .  
+            $row["Username"] . "</td><td>" .
+            $row["Score"] . "</td></tr>";
+          }
+        echo "</table>";
+        } else { echo "0 results"; }
+        $conn->close();
+      ?>
+</table>
+
+</div>
+</div>
+    </section>
             
 
 

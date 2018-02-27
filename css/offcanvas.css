@@ -19,14 +19,18 @@ body {
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.8);
     transition: -webkit-transform .3s ease-in-out;
+    -webkit-transition: -webkit-transform .3s ease-in-out;
+    -o-transition: transform .3s ease-in-out;
     transition: transform .3s ease-in-out;
     transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
     -webkit-transform: translateX(100%);
-    transform: translateX(100%);
+    -ms-transform: translateX(100%);
+        transform: translateX(100%);
   }
   .offcanvas-collapse.open {
     -webkit-transform: translateX(-1rem);
-    transform: translateX(-1rem); /* Account for horizontal padding on navbar */
+    -ms-transform: translateX(-1rem);
+        transform: translateX(-1rem); /* Account for horizontal padding on navbar */
   }
 }
 @media (min-width: 1200px) {
@@ -41,14 +45,18 @@ body {
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.8);
     transition: -webkit-transform .3s ease-in-out;
+    -webkit-transition: -webkit-transform .3s ease-in-out;
+    -o-transition: transform .3s ease-in-out;
     transition: transform .3s ease-in-out;
     transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
     -webkit-transform: translateX(100%);
-    transform: translateX(100%);
+    -ms-transform: translateX(100%);
+        transform: translateX(100%);
   }
   .offcanvas-collapse.open {
     -webkit-transform: translateX(-1rem);
-    transform: translateX(-1rem); /* Account for horizontal padding on navbar */
+    -ms-transform: translateX(-1rem);
+        transform: translateX(-1rem); /* Account for horizontal padding on navbar */
   }
 }
 
@@ -96,7 +104,7 @@ body {
 
 .border-bottom { border-bottom: 1px solid #e5e5e5; }
 
-.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+.box-shadow { -webkit-box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
 
 .lh-100 { line-height: 1; }
 .lh-125 { line-height: 1.25; }
@@ -108,4 +116,3 @@ body {
 *:active {
     outline: none !important;
 }
-
