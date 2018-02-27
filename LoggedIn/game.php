@@ -266,16 +266,20 @@ MODAL STYLING
             </div>
 
 
+            <!-- React loads in  -->
+            <div id="main"></div>
+
+
         <!-- index__map start -->
 
-        <section id="game-section" class="index__map col-12 p-2 map">
+       <!--  <section id="game-section" class="index__map col-12 p-2 map"> -->
             <!--<script src="../js/app_js.js">
             </script> -->
           
 
        
-            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2zN8wobSAuw_ejpGz9ll31ZMQL-iV7JE&libraries=geometry" type="text/javascript"></script>
-          </section>
+<!--             <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2zN8wobSAuw_ejpGz9ll31ZMQL-iV7JE&libraries=geometry" type="text/javascript"></script>
+          </section> -->
 <!--           <div id="clockdiv">
            <div>
              <span class="minutes"></span>
@@ -285,9 +289,9 @@ MODAL STYLING
              <span class="seconds"></span>
              <div class="smalltext">Seconds</div>
            </div> -->
-           <script src="../js/app_js.js">
+<!--            <script src="../js/app_js.js">
              </script>
-         </div>
+         </div> -->
   
           <!-- index__map ends -->
 
@@ -298,10 +302,10 @@ MODAL STYLING
 
           <!--Load in leaderboard -->
   
-          <section id="leaderboard-section" class="index__profile vh-100  leader-cover p-0">
+<!--           <section id="leaderboard-section" class="index__profile vh-100  leader-cover p-0">
           <div class="transparent pt-4">
                 <img src="../img/trophy.png" alt="game-avatar" class=" rounded mx-auto d-block h-25 bg-dark rounded-circle" >
-                <h1 class="text-warning text-center title">Leaderboard</h1>
+                <h1 class="text-warning text-center title">Leaderboard</h1> -->
 
               <!--  
               <div class ="container">
@@ -333,14 +337,14 @@ MODAL STYLING
               </table>
               -->
 
-<div class = "container">
+<!-- <div class = "container">
 <table class="table bg-white w-75 mt-5 mx-auto rounded">
   <thead class="thead-dark rounded">
     <tr>
       <th class="title text-warning" scope="col">Username</th>
       <th class="title text-warning" scope="col">Score</th>      
     </tr>
-  </thead>
+  </thead> -->
      <?php
         $conn = mysqli_connect("localhost", "root", "", "catchcoins");
         // Check connection
@@ -361,11 +365,11 @@ MODAL STYLING
         } else { echo "0 results"; }
         $conn->close();
       ?>
-</table>
+<!-- </table>
 
 </div>
 </div>
-    </section>
+    </section> -->
             
 
 
