@@ -227,6 +227,7 @@ MODAL STYLING
     border-radius: .8em;
     background: #27ae60;
     text-align: center;
+    letter-spacing: 1px;
    /*  text-transform: uppercase; */
 }
 
