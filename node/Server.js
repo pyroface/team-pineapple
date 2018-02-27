@@ -48,16 +48,11 @@ REST.prototype.configureExpress = function(connection) {
       self.startServer();
 }
 
-/* REST.prototype.startServer = function() {
+REST.prototype.startServer = function() {
       app.listen(process.env.PORT || 3000,function(){
           console.log("All right ! I am alive at Port 3000.");
       });
-} */
-
-var port = process.env.PORT || 8000
-server.listen(port, function() {
-    console.log("App is running on port " + port);
-});
+}
 
 REST.prototype.stop = function(err) {
     console.log("ISSUE WITH MYSQL n" + err);
