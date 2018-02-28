@@ -336,7 +336,7 @@ MODAL STYLING
               -->
 
 <div class = "container">
-<table class="table bg-white w-75 mt-5 mx-auto rounded">
+<table class="table bg-white w-75 mx-auto rounded">
   <thead class="thead-dark rounded">
     <tr>
       <th class="title text-warning" scope="col">Username</th>
