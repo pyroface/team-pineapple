@@ -252,6 +252,15 @@ MODAL STYLING
     letter-spacing: normal;
     word-wrap: normal;
 }
+/* --------------------- Sweet Alert styling -------------------- */
+.swal-button {
+    background-color: #4962B3;
+}
+
+.swal-title {
+  color: #9b59b6;
+  font-size: 30px;
+}
 
         </style>
     </head>
@@ -369,6 +378,8 @@ MODAL STYLING
             $sql = "INSERT INTO accounts (Username, Password) VALUES ('$name', '$password')";
             if(mysqli_query($link, $sql)){
                 echo "Records added successfully.";
+                echo  '<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"> </script>'.
+                      '<script> swal("Account created", "", "success") </script>';
             } else{
                 echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
             }
@@ -454,7 +465,7 @@ MODAL STYLING
         crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
         crossorigin="anonymous"></script>
-        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<!--         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
     </body>
 
 </html>
