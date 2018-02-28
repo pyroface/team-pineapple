@@ -236,13 +236,13 @@ MODAL STYLING
             <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
               <ul class="navbar-nav mr-auto mt-5 text-center">
                 <li class="nav-item">
-                  <a class="nav-link" href="#leaderboard-section">Leaderboard<span class="sr-only">(current)</span></a>
+                  <a onclick="removeLink()" class="nav-link" href="#game-section">Game</a>
+                <li class="nav-item">
+                  <a onclick="removeLink()" class="nav-link" href="#leaderboard-section">Leaderboard</a>
+                </li>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#game-section">Game</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../index.php">Logout</a>
+                  <a onclick="removeLink()" class="nav-link" href="../index.php">Logout</a>
                 </li>
               </ul>
             </div>
@@ -302,7 +302,7 @@ MODAL STYLING
   
           <section id="leaderboard-section" class="index__profile vh-100  leader-cover p-0">
           <div class="transparent pt-4">
-                <img src="../img/trophy.png" alt="game-avatar" class=" rounded mx-auto d-block h-25 bg-dark rounded-circle" >
+                <img src="../img/trophy.png" alt="game-avatar" class=" rounded mx-auto d-block h-25 bg-dark rounded-circle mt-5" >
                 <h1 class="text-warning text-center title">Leaderboard</h1>
 
               <!--  
@@ -379,6 +379,12 @@ MODAL STYLING
     <script src="../js/offcanvas.js"></script>
     <script>
     $('#exampleModal').modal('show')
+    </script>
+    <script> 
+      function removeLink() {
+        document.querySelector('.offcanvas-collapse').classList.remove('open'),
+        document.querySelector('.hamburger').classList.remove('is-active')
+      }
     </script>
   </body>
 </html>
