@@ -377,7 +377,7 @@ MODAL STYLING
             
             
             // attempt insert query execution
-            $sql = "INSERT INTO accounts (Username, Password) VALUES ('$name', '$password')";
+            $sql = "INSERT INTO accounts (Username, Password, Score) VALUES ('$name', '$password', 0)";
             if(mysqli_query($link, $sql)){
                 echo "Records added successfully.";
                 echo  '<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"> </script>'.
