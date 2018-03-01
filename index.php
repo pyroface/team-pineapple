@@ -73,7 +73,8 @@
 }
 
 .page-text-div p {
-    margin-top: 2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
     padding: 0;
 }
 
@@ -83,6 +84,10 @@
 
 .page-text-section h1{
     font-family: 'Bungee', cursive;
+}
+
+.index-text1 {
+    font-size: 2em;
 }
 
 /* ------------ for mobile view ------------- */
@@ -269,13 +274,10 @@ MODAL STYLING
 
         <section class="col-md-6 col-sm-12 page-text-section">
             <div class="page-text-div">
-                <h1 class="text-black normal">CATCH💰COINS</h1>   
-                <p class="text-black">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    Curabitur quis lectus tempus, mattis diam vitae, facilisis nisl. 
-                    Quisque eleifend, mi a consequat suscipit, metus massa auctor sapien, 
-                    eget blandit risus leo eu orci. 
-                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+                <h1 class="text-black normal">CATCH💰COINS</h1> 
+                <p class="text-black index-text1">
+                    Wanna be rich? Catch the COINS!<br>
+                    💰💰💰💰
                 </p>
                 <div class="SignUpButton">
                     <input type="button" name="" value="SIGN UP" class="btn btn-warning signUp" data-toggle="modal" data-target="#signUpModal" />

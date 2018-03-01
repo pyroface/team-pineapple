@@ -258,9 +258,9 @@ MODAL STYLING
                     </button>
                   </div>
                   <div class="modal-body">
-                      <img src="../img/pwa.gif" alt="">
                       <p class="normal">
-                        To gain the best experinece of the game save it to your home screen!!!  
+                        Try to catch the coins that shown up on the map. Once you are close to them, 
+                        they will be yours! <br>Ready? Go get them!!  
                       </p>
                   </div>
                 </div>
