@@ -21,6 +21,7 @@ REST_ROUTER.prototype.handleRoutes= function(router,connection,md5) {
     });
    
    router.post("/users",function(req,res){
+    res.setHeader('Access-Control-Allow-Origin', '*');
         var query = "INSERT INTO ??(??,??) VALUES (?,?)";
         var table = ["user_login","user_email","user_password",req.body.email,md5(req.body.password)];
         query = mysql.format(query,table);
@@ -35,6 +36,7 @@ REST_ROUTER.prototype.handleRoutes= function(router,connection,md5) {
 
     // Get one id from accounts, ID 
     router.get("/users/:user_id",function(req,res){
+        res.setHeader('Access-Control-Allow-Origin', '*');
         var query = "SELECT * FROM ?? WHERE ??=?";
         var table = ["accounts","ID",req.params.user_id];
         query = mysql.format(query,table);
