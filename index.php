@@ -25,6 +25,7 @@
                 }
                 else {
                     $error = "Your Login Name or Password is invalid";
+                    echo "<h4 class='text-center text-danger'>Your Login Name or Password is invalid</h4>";
                 }
                   
             }
