@@ -228,7 +228,7 @@ MODAL STYLING
 
     <title>Catchcoins💰</title>
   </head>
-        <body class="bg-light">
+        <body>
           <nav class="navbar fixed-top navbar-dark bg-dark bg-own ">
             <a class="navbar-brand" href="#">
             <img src="../img/logo.png" width="40" height="40" alt="">
@@ -342,7 +342,7 @@ MODAL STYLING
               -->
 
 <div class = "container">
-<table class="table bg-white w-75 mx-auto rounded">
+<table class="table bg-white w-75 mx-auto rounded m-0">
   <thead class="thead-dark rounded">
     <tr>
       <th class="title text-warning" scope="col">Username</th>
