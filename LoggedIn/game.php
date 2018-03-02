@@ -14,6 +14,12 @@
     <link href="../css/hamburgers.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/game.css">
     <link href="../css/profile.css" rel="stylesheet" >
+
+    <link rel="shortcut icon" href="../img/logo.ico">
+    <link rel="shortcut icon" href="../img/logo.png" sizes="16x16">
+    <link rel="shortcut icon" href="../img/logo.png" sizes="32x32">
+    <link rel="shortcut icon" href="../img/logo.png" sizes="96x96">
+    <link rel="apple-touch-icon" href="../img/logo.png" sizes="180x180">
     <link href="https://fonts.googleapis.com/css?family=Itim" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Short+Stack" rel="stylesheet">
     <style>
@@ -220,7 +226,7 @@ MODAL STYLING
 
     </style>
 
-    <title>Catchcoins</title>
+    <title>Catchcoins💰</title>
   </head>
         <body class="bg-light">
           <nav class="navbar fixed-top navbar-dark bg-dark bg-own ">
