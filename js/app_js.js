@@ -439,9 +439,20 @@ function runGame(pos) {
     for (var i = 0; i < coinMarkers.length; i++) {
         var close = google.maps.geometry.spherical.computeDistanceBetween (new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude), coinMarkers[i].getPosition());
         //console.log("i: " + i + "close: " + close);
-        if (close <= dist) {
+        if (close <= dist && coinMarkers[i].my_value) {
             // player is near coin!
   
+            var contentString = `
+            <div id="content">
+            <div id="siteNotice">
+            <h1 id="firstHeading" class="firstHeading">You got ${coinMarkers[i].my_value}💰</h1>
+            </div>
+            </div>;
+            `;
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString
+            });
+
             coinMarkers[i].setMap(null);
             infowindow.open(map, playerMarker);
             console.log("Player " + firstPlayer + "got " + coinMarkers[i].my_value + " more coins!");
@@ -467,16 +478,7 @@ function runGame(pos) {
             // TODO POST via Fetch() till API:et
 
         }
-        var contentString = `
-        <div id="content">
-        <div id="siteNotice">
-        <h1 id="firstHeading" class="firstHeading">You got ${coinMarkers[i].my_value}💰</h1>
-        </div>
-        </div>;
-        `;
-            var infowindow = new google.maps.InfoWindow({
-                content: contentString
-            });
+        
     
     }
 }
