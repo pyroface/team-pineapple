@@ -276,7 +276,7 @@ MODAL STYLING
         <section class="col-md-6 col-sm-12 page-text-section">
             <div class="page-text-div">
                 <h1 class="text-black normal">CATCH💰COINS</h1> 
-                <p class="text-black index-text1"><s class="text-black">CATCH <span class="text-muted">POKEMON</span></s> CATCH <span class="text-warning">COINS!!!</span><br>
+                <p class="text-black index-text1"><s class="text-black">CATCH <span class="text-muted">POKEMON</span></s> CATCH <span class="text-warning">COINS!!!!!</span><br>
                    BECOME 💰💰💰💰
                 </p>
                 <div class="SignUpButton">
