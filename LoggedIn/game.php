@@ -248,7 +248,7 @@ MODAL STYLING
                 </li>
                 </li>
                 <li class="nav-item">
-                  <a onclick="removeLink()" class="nav-link" href="../index.php">Logout</a>
+                  <a  class="nav-link" href="../index.php">Logout</a>
                 </li>
               </ul>
             </div>
@@ -392,5 +392,6 @@ MODAL STYLING
         document.querySelector('.hamburger').classList.remove('is-active')
       }
     </script>
+    <script src="../js/zenscroll-min.js"></script>
   </body>
 </html>
